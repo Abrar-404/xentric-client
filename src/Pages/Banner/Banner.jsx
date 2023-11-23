@@ -1,6 +1,7 @@
 import img from '../../assets/banner.png';
 import Motion from '../../Components/Animation/Motion';
 import '../../Components/Styles/animista.css';
+
 const Banner = () => {
   return (
     <div>
@@ -11,7 +12,7 @@ const Banner = () => {
           alt=""
         />
 
-        <div className="text-center md:text-start lg:text-start">
+        <div className="text-center md:text-start lg:text-start heartbeat">
           <h1 className="font-bold font-tech lg:text-8xl md:text-5xl text-2xl text-[#D51E77]">
             THINK
           </h1>{' '}

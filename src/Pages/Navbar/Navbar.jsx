@@ -60,7 +60,7 @@ const Navbar = () => {
       {/* fixed z-[10] mx-auto md:max-w-[768px] max-w-[428px] lg:max-w-[1400px] */}
       <div className="navbar bg-transparent">
         <div className="navbar-start">
-          <div className="dropdown ">
+          <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -85,13 +85,17 @@ const Navbar = () => {
             </ul>
           </div>
           <Link to="/">
-            {/* <img className="w-[120px] h-[70px]" src={img} alt="" /> */}
+            <img
+              src="https://i.ibb.co/1YCvN7J/logo.png"
+              className="w-[150px] h-[50px]"
+              alt=""
+            />
           </Link>
         </div>
         <div className="navbar-end hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navLinks}</ul>
         </div>
-        <div className="">
+        <div className="navbar-end">
           {/* <div className="text-white mr-10 text-3xl">
             <NavLink to="/cart">
               <BsCart3></BsCart3>

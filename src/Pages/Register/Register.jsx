@@ -134,10 +134,10 @@ const Register = () => {
       <div className="hero min-h-screen">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">
-            <h1 className="text-5xl text-white font-bold">Register!</h1>
+            {/* <h1 className="text-5xl text-white font-bold">Register!</h1> */}
             <img
-              className="w-[400px] h-[380px] lg:ml-36"
-              src="https://i.ibb.co/zJdf8Zh/login.gif"
+              className="w-[400px] h-[380px] lg:ml-36 gap-5"
+              src="https://i.ibb.co/RcKzhfv/output-onlinegiftools-1.gif"
               alt=""
             />
           </div>

@@ -1,6 +1,7 @@
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
+import '../../Components/Styles/button.css';
 
 const Navbar = () => {
   const { user, userLogOut } = useContext(AuthContext);
@@ -19,46 +20,35 @@ const Navbar = () => {
 
   const navLinks = (
     <>
-      <li className=" -mr-[2%] font-script text-xl font-extrabold">
+      <li className=" -mr-[2%] text-white">
         <NavLink to="/">Home</NavLink>
       </li>
 
       {user ? null : (
         <>
-          <li className="font-script text-xl font-extrabold">
+          <li className="text-white">
             <NavLink to="/login">Login</NavLink>
           </li>
-          <li className="font-script text-xl font-extrabold">
+          <li className="text-white">
             <NavLink to="/register">Register</NavLink>
           </li>
-          <li className="font-script text-xl font-extrabold">
-            <NavLink to="/myBookings">My Bookings</NavLink>
+
+          <li className="text-white">
+            <NavLink to="/products">Products</NavLink>
           </li>
-          <li className="font-script text-xl font-extrabold">
-            <NavLink to="/rooms">Rooms</NavLink>
-          </li>
-          <li className="font-script text-xl font-extrabold">
+          <li className="text-white">
             <NavLink to="/gallery">Gallery</NavLink>
-          </li>
-          <li className="font-script text-xl font-extrabold">
-            <NavLink to="/newsletter">Newsletter</NavLink>
           </li>
         </>
       )}
 
       {user && (
         <>
-          <li className="font-script text-xl font-extrabold">
-            <NavLink to="/myBookings">My Bookings</NavLink>
+          <li className="text-white">
+            <NavLink to="/products">Products</NavLink>
           </li>
-          <li className="font-script text-xl font-extrabold">
-            <NavLink to="/rooms">Rooms</NavLink>
-          </li>
-          <li className="font-script text-xl font-extrabold">
+          <li className="text-white">
             <NavLink to="/gallery">Gallery</NavLink>
-          </li>
-          <li className="font-script text-xl font-extrabold">
-            <NavLink to="/newsletter">Newsletter</NavLink>
           </li>
         </>
       )}
@@ -68,7 +58,7 @@ const Navbar = () => {
   return (
     <div>
       {/* fixed z-[10] mx-auto md:max-w-[768px] max-w-[428px] lg:max-w-[1400px] */}
-      <div className="navbar bg-[#F0E6E7]">
+      <div className="navbar bg-transparent">
         <div className="navbar-start">
           <div className="dropdown ">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -98,10 +88,10 @@ const Navbar = () => {
             {/* <img className="w-[120px] h-[70px]" src={img} alt="" /> */}
           </Link>
         </div>
-        <div className="navbar-center hidden lg:flex">
+        <div className="navbar-end hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navLinks}</ul>
         </div>
-        <div className="navbar-end">
+        <div className="">
           {/* <div className="text-white mr-10 text-3xl">
             <NavLink to="/cart">
               <BsCart3></BsCart3>
@@ -142,7 +132,10 @@ const Navbar = () => {
             </div>
           ) : (
             <Link to="/login">
-              <button className="btn btn-primary border-none text-xs text-white bg-[#AA7474]">
+              <button
+                role="button"
+                className="button-85 border-none text-xs text-white"
+              >
                 Login
               </button>
             </Link>

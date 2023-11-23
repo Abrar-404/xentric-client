@@ -112,7 +112,7 @@ const Login = () => {
             <h1 className="text-5xl w-full text-white font-bold">Login now!</h1>
             <img
               className="w-[400px] h-[380px] lg:ml-36"
-              src="https://i.ibb.co/q7Tm4cr/login-animate.gif"
+              src="https://i.ibb.co/7zvrhNr/output-onlinegiftools.gif"
               alt=""
             />
           </div>

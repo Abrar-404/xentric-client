@@ -123,6 +123,13 @@ const Navbar = () => {
                     {user?.displayName}
                   </button>
                 </li>
+                <Link to="/dashboard">
+                  <li>
+                    <button className="btn btn-sm mb-2 btn-primary">
+                      Dashboard
+                    </button>
+                  </li>
+                </Link>
                 <li>
                   <button
                     className="btn btn-sm btn-primary"

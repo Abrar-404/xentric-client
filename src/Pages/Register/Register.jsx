@@ -3,11 +3,11 @@ import { Link, useNavigate } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FcGoogle } from 'react-icons/fc';
-import { AuthContext } from '../../Providers/AuthProvider';
 import Swal from 'sweetalert2';
-import '../Styles/button.css';
-import '../Styles/button2.css';
-import '../Styles/form.css';
+import '../../Components/Styles/button.css';
+import '../../Components/Styles/button2.css';
+import '../../Components/Styles/form.css';
+import { AuthContext } from '../../Providers/AuthProvider';
 
 const Register = () => {
   const { registerUser, googleRegister } = useContext(AuthContext);

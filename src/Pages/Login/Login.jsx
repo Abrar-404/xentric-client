@@ -6,7 +6,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from '../../Providers/AuthProvider';
 import axios from 'axios';
-import '../Styles/button3.css';
+import '../../Components/Styles/button3.css';
 
 const Login = () => {
   const { loginUser, googleRegister } = useContext(AuthContext);

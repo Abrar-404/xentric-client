@@ -47,8 +47,9 @@ const Register = () => {
     const email = e.target.email.value;
     const password = e.target.password.value;
     const name = e.target.name.value;
+    const photo = e.target.photo.value;
 
-    console.log(email, name, password);
+    console.log(email, name, password, photo);
 
     if (password.length < 6) {
       Swal.fire({
@@ -153,6 +154,20 @@ const Register = () => {
                   className="input input-bordered button-85"
                   required
                   name="name"
+                />
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text text-white font-bold ">
+                    Photo URL
+                  </span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Your Photo URL"
+                  className="input input-bordered button-85"
+                  required
+                  name="photo"
                 />
               </div>
               <div className="form-control">

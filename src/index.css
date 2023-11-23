@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'TECH';
+  src: url('./Components/Fonts/BlackpastDemo-vm2l9.ttf');
+}

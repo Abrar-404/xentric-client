@@ -37,6 +37,9 @@ const Navbar = () => {
             <NavLink to="/products">Products</NavLink>
           </li>
           <li className="text-white">
+            <NavLink to="/trending">Trending</NavLink>
+          </li>
+          <li className="text-white">
             <NavLink to="/gallery">Gallery</NavLink>
           </li>
         </>
@@ -46,6 +49,9 @@ const Navbar = () => {
         <>
           <li className="text-white">
             <NavLink to="/products">Products</NavLink>
+          </li>
+          <li className="text-white">
+            <NavLink to="/trending">Trending</NavLink>
           </li>
           <li className="text-white">
             <NavLink to="/gallery">Gallery</NavLink>

@@ -20,41 +20,60 @@ const Navbar = () => {
 
   const navLinks = (
     <>
-      <li className=" -mr-[2%] text-white">
-        <NavLink to="/">Home</NavLink>
+      <li className="">
+        <button className="text-white button-85 btn-sm mr-1 mb-2 text-center">
+          <NavLink to="/">Home</NavLink>
+        </button>
       </li>
 
       {user ? null : (
         <>
-          <li className="text-white">
-            <NavLink to="/login">Login</NavLink>
-          </li>
-          <li className="text-white">
-            <NavLink to="/register">Register</NavLink>
+          {/* <li className="">
+            <button className="text-white button-85 btn-sm mr-2 mb-2 text-center">
+              {' '}
+              <NavLink to="/login">Login</NavLink>
+            </button>
+          </li> */}
+          <li className="">
+            <button className="text-white button-85 btn-sm mr-2 mb-2 text-center">
+              <NavLink to="/register">Register</NavLink>
+            </button>
           </li>
 
-          <li className="text-white">
-            <NavLink to="/products">Products</NavLink>
+          <li className="">
+            <button className="text-white button-85 btn-sm mr-2 mb-2 text-center">
+              <NavLink to="/products">Products</NavLink>
+            </button>
           </li>
-          <li className="text-white">
-            <NavLink to="/trending">Trending</NavLink>
+          <li className="">
+            <button className="text-white button-85 btn-sm mr-2 mb-2 text-center">
+              <NavLink to="/trending">Trending</NavLink>
+            </button>
           </li>
-          <li className="text-white">
-            <NavLink to="/gallery">Gallery</NavLink>
+          <li className="">
+            <button className="text-white button-85 btn-sm mr-2 mb-2 text-center">
+              <NavLink to="/gallery">Gallery</NavLink>
+            </button>
           </li>
         </>
       )}
 
       {user && (
         <>
-          <li className="text-white">
-            <NavLink to="/products">Products</NavLink>
+          <li className="">
+            <button className="text-white button-85 btn-sm mr-2 mb-2 text-center">
+              <NavLink to="/products">Products</NavLink>
+            </button>
           </li>
-          <li className="text-white">
-            <NavLink to="/trending">Trending</NavLink>
+          <li className="">
+            <button className="text-white button-85 btn-sm mr-2 mb-2 text-center">
+              <NavLink to="/trending">Trending</NavLink>
+            </button>
           </li>
-          <li className="text-white">
-            <NavLink to="/gallery">Gallery</NavLink>
+          <li className="">
+            <button className="text-white button-85 btn-sm mb-2 text-center">
+              <NavLink to="/gallery">Gallery</NavLink>
+            </button>
           </li>
         </>
       )}
@@ -125,14 +144,14 @@ const Navbar = () => {
                 </li>
                 <Link to="/dashboard">
                   <li>
-                    <button className="btn btn-sm mb-2 btn-primary">
+                    <button className="btn btn-sm mb-2 button-85">
                       Dashboard
                     </button>
                   </li>
                 </Link>
                 <li>
                   <button
-                    className="btn btn-sm btn-primary"
+                    className="btn btn-sm button-85"
                     onClick={handleLogOut}
                   >
                     Log Out

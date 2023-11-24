@@ -15,7 +15,7 @@ const CardLoader = () => {
 
   return (
     <div>
-      <div className="flex flex-col md:flex-row lg:flex-row flex-wrap justify-center gap-10 mt-20 mx-auto">
+      <div className="flex flex-col md:flex-row lg:flex-row flex-wrap items-center justify-center gap-10 mt-20 mx-auto">
         {featured?.map(feature => (
           <Cards key={feature?._id} feature={feature}></Cards>
         ))}

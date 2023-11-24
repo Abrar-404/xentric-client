@@ -109,7 +109,7 @@ const Login = () => {
       <div className="hero  min-h-screen">
         <div className="hero-content  flex-col lg:flex-row-reverse">
           <div className="text-center items-center lg:text-left">
-            <h1 className="text-5xl w-full text-white font-bold">Login now!</h1>
+            {/* <h1 className="text-5xl w-full text-white font-bold">Login now!</h1> */}
             <img
               className="w-[400px] h-[380px] lg:ml-36"
               src="https://i.ibb.co/7zvrhNr/output-onlinegiftools.gif"

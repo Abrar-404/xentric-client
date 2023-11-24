@@ -6,3 +6,20 @@
   font-family: 'TECH';
   src: url('./Components/Fonts/BlackpastDemo-vm2l9.ttf');
 }
+
+@font-face {
+  font-family: 'VERMIN';
+  src: url('./Components/Fonts/VerminVibesV-Zlg3.ttf');
+}
+@font-face {
+  font-family: 'ALIEN-ITALIC';
+  src: url('./Components/Fonts/AlienRavagerItalic-4B214.ttf');
+}
+@font-face {
+  font-family: 'ALIEN';
+  src: url('./Components/Fonts/AlienRavager-0WYod.ttf');
+}
+@font-face {
+  font-family: 'AZONIX';
+  src: url('./Components/Fonts/Azonix-1VB0.otf');
+}

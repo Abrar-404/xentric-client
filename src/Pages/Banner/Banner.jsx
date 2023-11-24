@@ -13,7 +13,7 @@ const Banner = () => {
         />
 
         <div className="text-center md:text-start lg:text-start ">
-          <h1 className="font-bold font-tech lg:text-8xl md:text-5xl text-2xl heartbeat text-[#D51E77]">
+          <h1 className="font-bold font-vermin lg:text-8xl md:text-5xl text-2xl heartbeat text-[#D51E77]">
             THINK
           </h1>{' '}
           <h1 className="font-bold font-mono lg:text-8xl md:text-5xl text-2xl heartbeat text-white">

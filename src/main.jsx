@@ -10,11 +10,13 @@ import Register from './Pages/Register/Register';
 import TrendingCardLoader from './Pages/Trending/TrendingCardLoader';
 import FeatureCardDetails from './Pages/FeatureCards/FeatureCardDetails';
 import TrendingCardDetails from './Pages/Trending/TrendingCardDetails';
+import ErrorElements from './Components/ErrorElements/ErrorElements';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <MainLayout></MainLayout>,
+    errorElement: <ErrorElements></ErrorElements>,
     children: [
       {
         path: '/',

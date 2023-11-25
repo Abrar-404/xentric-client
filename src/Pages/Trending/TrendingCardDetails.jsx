@@ -1,9 +1,8 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from 'react-router-dom';
 
 const TrendingCardDetails = () => {
-
-  const trendingDetails = useLoaderData()
-  const {img, name, description, more} = trendingDetails || {}
+  const trendingDetails = useLoaderData();
+  const { img, name, description, more, _id } = trendingDetails || {};
 
   return (
     <div>
@@ -31,7 +30,9 @@ const TrendingCardDetails = () => {
                 <button className="btn button-85">Report</button>
               </div>
               <div className="justify-center mt-10">
-                <button className="btn w-[30%] button-85">Post Review</button>
+                <Link to={`/postReviewForm/${_id}`}>
+                  <button className="btn w-[30%] button-85">Post Review</button>
+                </Link>
               </div>
             </div>
           </div>

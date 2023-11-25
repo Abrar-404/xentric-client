@@ -11,6 +11,7 @@ import TrendingCardLoader from './Pages/Trending/TrendingCardLoader';
 import FeatureCardDetails from './Pages/FeatureCards/FeatureCardDetails';
 import TrendingCardDetails from './Pages/Trending/TrendingCardDetails';
 import ErrorElements from './Components/ErrorElements/ErrorElements';
+import PostReviewForm from './Pages/PostReview/PostReviewForm';
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,12 @@ const router = createBrowserRouter([
       {
         path: '/trendingCards/:id',
         element: <TrendingCardDetails></TrendingCardDetails>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/trendingCards/${params.id}`),
+      },
+      {
+        path: '/postReviewForm/:id',
+        element: <PostReviewForm/>,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/trendingCards/${params.id}`),
       },

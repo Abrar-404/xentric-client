@@ -30,8 +30,8 @@ const Cards = ({ feature }) => {
     if (!user) {
       navigate('/login');
     } else if (hasVoted) {
-      // Update the vote count when the user clicks "Upvote"
       setVoteCount(prevCount => prevCount + 1);
+      // Update the vote count when the user clicks "Upvote"
 
       // Update local storage to indicate that the user has voted
       localStorage.setItem(`vote_${name}`, 'true');

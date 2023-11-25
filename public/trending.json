@@ -1,0 +1,26 @@
+[
+  {
+    "img": "https://example.com/product1.jpg",
+    "name": "QuantumX Pro VR Headset"
+  },
+  {
+    "img": "https://example.com/product2.jpg",
+    "name": "NeuraSync Smart Watch 3.0"
+  },
+  {
+    "img": "https://example.com/product3.jpg",
+    "name": "AeroBeam Ultra 5G Router"
+  },
+  {
+    "img": "https://example.com/product4.jpg",
+    "name": "NexGen AI Drone Explorer"
+  },
+  {
+    "img": "https://example.com/product5.jpg",
+    "name": "ZetaDrive Quantum SSD 1TB"
+  },
+  {
+    "img": "https://example.com/product6.jpg",
+    "name": "XenonPod 8K HDR Gaming Monitor"
+  }
+]

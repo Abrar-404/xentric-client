@@ -1,6 +1,9 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import TrendingCards from './TrendingCards';
+import '../../Components/Styles/button48.css';
+import { TbArrowGuide } from 'react-icons/tb';
+import { Link } from 'react-router-dom';
 
 const TrendingCardLoader = () => {
   const [trendCards, setTrendCards] = useState([]);
@@ -23,6 +26,16 @@ const TrendingCardLoader = () => {
           ></TrendingCards>
         ))}
       </div>
+      <Link to="/products">
+        <div className="flex justify-center mt-10">
+          <button className="button-57" role="button">
+            <span>Show All Products</span>
+            <span>
+              <TbArrowGuide></TbArrowGuide>
+            </span>
+          </button>
+        </div>
+      </Link>
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import 'aos/dist/aos.css';
 import { useContext, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider';
 import '../../Components/Styles/cardflip.css';
 import '../../Components/Styles/button.css';
@@ -47,7 +47,10 @@ const Cards = ({ feature }) => {
         <div className="glassBox">
           <div className="glassBox__imgBox">
             <img className="rounded-full" src={img} alt="" />
-            <h3 className="glassBox__title">{name}</h3>
+
+            <Link to="/products">
+              <h3 className="glassBox__title">{name}</h3>
+            </Link>
           </div>
           <div className="mt-20 text-white">
             <button className="button-85" onClick={handleVote}>

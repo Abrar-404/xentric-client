@@ -1,18 +1,32 @@
 [
   {
-    "img": "https://example.com/image1.jpg",
-    "name": "VR Goggles"
+    "img": "https://i.ibb.co/ZzQLsxr/woman-virtual-reality-headset-with-virtual-reality-headset-527675-489.jpg",
+    "name": "VR Goggles",
+    "description": "Immerse yourself in virtual reality with cutting-edge VR goggles.",
+    "more": "https://www.pcmag.com/picks/the-best-vr-headsets"
   },
   {
-    "img": "https://example.com/image2.jpg",
-    "name": "Smart Watches"
+    "img": "https://i.ibb.co/4SFRCzT/black-smart-watch-with-neon-light-face-843415-1409.jpg",
+    "name": "Smart Watches",
+    "description": "Stay connected and track your health with the latest smart watches.",
+    "more": "https://www.startech.com.bd/gadget/smart-watch"
   },
   {
-    "img": "https://example.com/image3.jpg",
-    "name": "Nintendo"
+    "img": "https://i.ibb.co/w4DwdB4/switch-2019-jpg-1200x0-crop-q85.jpg",
+    "name": "Nintendo",
+    "description": "Explore the world of gaming with Nintendo's innovative gaming systems.",
+    "more": "https://www.nintendo.com/us/"
   },
   {
-    "img": "https://example.com/image4.jpg",
-    "name": "EMO - The Robot"
+    "img": "https://i.ibb.co/C6jf472/Details06.webp",
+    "name": "EMO - The Robot",
+    "description": "Meet EMO, the adorable robot companion that brings joy to your life.",
+    "more": "https://living.ai/product/emo/"
+  },
+  {
+    "img": "https://i.ibb.co/KXK8tNj/mfrack-drone-9612fee1-7a8e-4250-9f9d-db2258a3999b-1024x574.jpg",
+    "name": "Nexgen Drone",
+    "description": "The wings of Justice will take you ahead of you imagination",
+    "more": "https://www.startech.com.bd/drone"
   }
 ]

@@ -6,11 +6,16 @@ import '../../Components/Styles/texteffect.css';
 
 const Home = () => {
   return (
-    <div className="mt-20">
+    <div className="mt-48">
       <Banner></Banner>
-      <CardLoader></CardLoader>
+      <div className="text-center mt-48">
+        <h1 className="lg:text-6xl md:text-4xl text-3xl text-white font-vermin text-flicker-in-glow">
+          Featured
+        </h1>
+        <CardLoader></CardLoader>
+      </div>
 
-      <div className="text-center mt-20">
+      <div className="text-center mt-48">
         <h1 className="lg:text-6xl md:text-4xl text-3xl text-white font-vermin text-flicker-in-glow">
           Just Relax A Bit
         </h1>

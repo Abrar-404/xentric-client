@@ -28,12 +28,6 @@ const Navbar = () => {
 
       {user ? null : (
         <>
-          {/* <li className="">
-            <button className="text-white button-85 btn-sm mr-2 mb-2 text-center">
-              {' '}
-              <NavLink to="/login">Login</NavLink>
-            </button>
-          </li> */}
           <li className="">
             <button className="text-white button-85 btn-sm mr-2 mb-2 text-center">
               <NavLink to="/register">Register</NavLink>
@@ -52,7 +46,7 @@ const Navbar = () => {
           </li>
           <li className="">
             <button className="text-white button-85 btn-sm mr-2 mb-2 text-center">
-              <NavLink to="/gallery">Gallery</NavLink>
+              <NavLink to="/myProducts">My Products</NavLink>
             </button>
           </li>
         </>
@@ -71,8 +65,8 @@ const Navbar = () => {
             </button>
           </li>
           <li className="">
-            <button className="text-white button-85 btn-sm mb-2 text-center">
-              <NavLink to="/gallery">Gallery</NavLink>
+            <button className="text-white button-85 btn-sm mr-2 mb-2 text-center">
+              <NavLink to="/myProducts">My Products</NavLink>
             </button>
           </li>
         </>

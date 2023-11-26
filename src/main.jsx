@@ -12,6 +12,7 @@ import FeatureCardDetails from './Pages/FeatureCards/FeatureCardDetails';
 import TrendingCardDetails from './Pages/Trending/TrendingCardDetails';
 import ErrorElements from './Components/ErrorElements/ErrorElements';
 import PostReviewForm from './Pages/PostReview/PostReviewForm';
+import AddProductsForm from './Pages/AddProducts/AddProductsForm';
 
 const router = createBrowserRouter([
   {
@@ -49,7 +50,13 @@ const router = createBrowserRouter([
       },
       {
         path: '/postReviewForm/:id',
-        element: <PostReviewForm/>,
+        element: <PostReviewForm />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/trendingCards/${params.id}`),
+      },
+      {
+        path: '/addProductsForm/:id',
+        element: <AddProductsForm></AddProductsForm>,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/trendingCards/${params.id}`),
       },

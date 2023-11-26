@@ -23,6 +23,11 @@ const TrendingCards = ({ trending }) => {
             <div className="card-actions justify-start">
               <button className="btn button-85">Upvote</button>
             </div>
+            <div className="mt-10 w-full">
+              <Link to={`/addProductsForm/${_id}`}>
+                <button className="btn button-85 w-full">Add Products</button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

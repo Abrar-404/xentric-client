@@ -1,0 +1,22 @@
+.container {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  border-radius: 30px;
+  text-align: center; /* Center the text horizontally */
+  line-height: 150px; /* Center the text vertically */
+  font-family: Arial, sans-serif; /* Choose your preferred font */
+  font-size: 16px; /* Adjust the font size as needed */
+  color: #fff; /* Text color */
+}
+
+.container::before {
+  content: 'RELAX';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 30px; /* Adjust to match the container's border-radius */
+  box-shadow: 0 0 20px 10px #db0353, 0 0 40px 20px #db0353; /* Add an extra layer for a stronger glow */
+}

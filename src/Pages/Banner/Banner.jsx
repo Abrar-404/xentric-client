@@ -1,6 +1,7 @@
 import img from '../../assets/banner.png';
 import Motion from '../../Components/Animation/Motion';
 import '../../Components/Styles/animista.css';
+import '../../Components/Styles/texteffect.css';
 
 const Banner = () => {
   return (
@@ -13,10 +14,10 @@ const Banner = () => {
         />
 
         <div className="text-center md:text-start lg:text-start ">
-          <h1 className="font-bold font-vermin lg:text-8xl md:text-5xl text-2xl heartbeat text-[#D51E77]">
+          <h1 className="font-bold font-vermin text-flicker-in-glow lg:text-8xl md:text-5xl text-2xl heartbeat text-[#D51E77]">
             THINK
           </h1>{' '}
-          <h1 className="font-bold font-mono lg:text-8xl md:text-5xl text-2xl heartbeat text-white">
+          <h1 className="font-bold font-mono text-flicker-in-glow lg:text-8xl md:text-5xl text-2xl heartbeat text-white">
             DIFFERENTLY
           </h1>{' '}
           <br />

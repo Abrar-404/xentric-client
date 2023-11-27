@@ -14,6 +14,7 @@ import ErrorElements from './Components/ErrorElements/ErrorElements';
 import PostReviewForm from './Pages/PostReview/PostReviewForm';
 import AddProductsForm from './Pages/AddProducts/AddProductsForm';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
+import MyProducts from './Pages/MyProductsPage/MyProducts';
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,14 @@ const router = createBrowserRouter([
       {
         path: '/trending',
         element: <TrendingCardLoader></TrendingCardLoader>,
+      },
+      {
+        path: '/myProducts',
+        element: (
+          <PrivateRoute>
+            <MyProducts></MyProducts>,
+          </PrivateRoute>
+        ),
       },
       {
         path: '/featureCards/:id',

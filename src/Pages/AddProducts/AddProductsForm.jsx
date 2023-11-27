@@ -1,23 +1,33 @@
 import axios from 'axios';
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider';
 const AddProductsForm = () => {
-  const form = useLoaderData();
+  const items = useLoaderData();
+  const { img, name, description, more, _id } = items || {};
   const { user } = useContext(AuthContext);
-  const { img, name, description, more } = form || {};
 
-  useEffect(() => {
-    axios.post('http://localhost:5000/addProducts').then(res => {
+  const handleAddItems = e => {
+    e.preventDefault();
+    const productItem = {
+      productId: _id,
+      email: user.email,
+      name,
+      img,
+      description,
+      more,
+    };
+    axios.post('http://localhost:5000/myProducts', productItem).then(res => {
       console.log(res.data);
     });
-  }, []);
+  };
+
   return (
     <div>
       <div className="hero min-h-screen bg-transparent mt-20">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="card shrink-0 w-full max-w-sm shadow-2xl  button-85">
-            <form className="card-body">
+            <form onSubmit={handleAddItems} className="card-body">
               <div className="form-control">
                 <div className="flex items-center justify-evenly md:flex-row lg:flex-row flex-col">
                   <img

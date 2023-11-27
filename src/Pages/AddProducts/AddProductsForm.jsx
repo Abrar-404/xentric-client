@@ -1,12 +1,14 @@
-import axios from 'axios';
+// import axios from 'axios';
 import { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../../Providers/AuthProvider';
+import useAxiosSecure from './../../Components/Hooks/useAxiosSecure';
 const AddProductsForm = () => {
   const items = useLoaderData();
   const { img, name, description, more, _id } = items || {};
   const { user } = useContext(AuthContext);
+  const axiosSecure = useAxiosSecure()
 
   const handleAddItems = e => {
     e.preventDefault();
@@ -18,19 +20,21 @@ const AddProductsForm = () => {
       description,
       more,
     };
-    axios.post('http://localhost:5000/myProducts', productItem).then(res => {
-      console.log(res.data);
-      if (res.data.insertedId) {
-        Swal.fire({
-          title: `Bingo!`,
-          text: ` ${name} added to the cart.`,
-          imageUrl: `${img}`,
-          imageWidth: 400,
-          imageHeight: 200,
-          imageAlt: 'Custom image',
-        });
-      }
-    });
+    axiosSecure
+      .post('/myProducts', productItem)
+      .then(res => {
+        console.log(res.data);
+        if (res.data.insertedId) {
+          Swal.fire({
+            title: `Bingo!`,
+            text: ` ${name} added to the cart.`,
+            imageUrl: `${img}`,
+            imageWidth: 400,
+            imageHeight: 200,
+            imageAlt: 'Custom image',
+          });
+        }
+      });
   };
 
   return (

@@ -1,10 +1,17 @@
-import { useContext } from 'react';
+import axios from 'axios';
+import { useContext, useEffect } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider';
 const AddProductsForm = () => {
   const form = useLoaderData();
   const { user } = useContext(AuthContext);
   const { img, name, description, more } = form || {};
+
+  useEffect(() => {
+    axios.post('http://localhost:5000/addProducts').then(res => {
+      console.log(res.data);
+    });
+  }, []);
   return (
     <div>
       <div className="hero min-h-screen bg-transparent mt-20">

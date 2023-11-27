@@ -15,7 +15,7 @@ const Home = () => {
         <CardLoader></CardLoader>
       </div>
 
-      <div className="text-center mt-48">
+      <div className="text-center mt-48 mb-48">
         <h1 className="lg:text-6xl md:text-4xl text-3xl text-white font-vermin text-flicker-in-glow">
           Just Relax A Bit
         </h1>

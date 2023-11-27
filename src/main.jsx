@@ -13,6 +13,7 @@ import TrendingCardDetails from './Pages/Trending/TrendingCardDetails';
 import ErrorElements from './Components/ErrorElements/ErrorElements';
 import PostReviewForm from './Pages/PostReview/PostReviewForm';
 import AddProductsForm from './Pages/AddProducts/AddProductsForm';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -50,13 +51,21 @@ const router = createBrowserRouter([
       },
       {
         path: '/postReviewForm/:id',
-        element: <PostReviewForm />,
+        element: (
+          <PrivateRoute>
+            <PostReviewForm />
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
           fetch(`http://localhost:5000/trendingCards/${params.id}`),
       },
       {
         path: '/addProductsForm/:id',
-        element: <AddProductsForm></AddProductsForm>,
+        element: (
+          <PrivateRoute>
+            <AddProductsForm></AddProductsForm>
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
           fetch(`http://localhost:5000/trendingCards/${params.id}`),
       },

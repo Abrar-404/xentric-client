@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import Swal from 'sweetalert2';
 import { AuthContext } from '../../Providers/AuthProvider';
 const AddProductsForm = () => {
   const items = useLoaderData();
@@ -19,6 +20,16 @@ const AddProductsForm = () => {
     };
     axios.post('http://localhost:5000/myProducts', productItem).then(res => {
       console.log(res.data);
+      if (res.data.insertedId) {
+        Swal.fire({
+          title: `Bingo!`,
+          text: ` ${name} added to the cart.`,
+          imageUrl: `${img}`,
+          imageWidth: 400,
+          imageHeight: 200,
+          imageAlt: 'Custom image',
+        });
+      }
     });
   };
 

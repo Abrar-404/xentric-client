@@ -2,10 +2,13 @@ import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
 import '../../Components/Styles/button.css';
+import useCarts from './../../Components/Hooks/useCarts';
+import { FaOpencart } from 'react-icons/fa';
 
 const Navbar = () => {
   const { user, userLogOut } = useContext(AuthContext);
   const navigate = useNavigate();
+  const [cart] = useCarts();
 
   const handleLogOut = () => {
     userLogOut()
@@ -46,7 +49,11 @@ const Navbar = () => {
           </li>
           <li className="">
             <button className="text-white button-85 btn-sm mr-2 mb-2 text-center">
-              <NavLink to="/myProducts">My Products</NavLink>
+              <NavLink to="/myProducts">
+                <div className="flex items-center gap-2">
+                  <FaOpencart></FaOpencart>+{cart?.length}
+                </div>
+              </NavLink>
             </button>
           </li>
         </>
@@ -66,7 +73,11 @@ const Navbar = () => {
           </li>
           <li className="">
             <button className="text-white button-85 btn-sm mr-2 mb-2 text-center">
-              <NavLink to="/myProducts">My Products</NavLink>
+              <NavLink to="/myProducts">
+                <div className="flex items-center gap-2">
+                  <FaOpencart></FaOpencart>+{cart?.length}
+                </div>
+              </NavLink>
             </button>
           </li>
         </>

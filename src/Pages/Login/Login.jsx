@@ -35,7 +35,7 @@ const Login = () => {
         console.log(loggedInGoogleUser);
         // const user = { email };
         axios
-          .post('https://inn-tero-server.vercel.app/jwt', loggedInGoogleUser, {
+          .post('http://localhost:5000/jwt', loggedInGoogleUser, {
             withCredentials: true,
           })
           .then(res => {

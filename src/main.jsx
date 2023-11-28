@@ -17,6 +17,8 @@ import PrivateRoute from './PrivateRoute/PrivateRoute';
 import MyProducts from './Pages/MyProductsPage/MyProducts';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import AddProductsPage from './Pages/AddProducts/AddProductsPage';
+import Dashboard from './Pages/Dashboard/Dashboard';
+import MyProfile from './Pages/MyProfile/MyProfile';
 
 
 const queryClient = new QueryClient();
@@ -57,6 +59,22 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <AddProductsPage></AddProductsPage>,
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: '/dashboard',
+        element: (
+          <PrivateRoute>
+            <Dashboard></Dashboard>,
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: '/myProfile',
+        element: (
+          <PrivateRoute>
+            <MyProfile></MyProfile>,
           </PrivateRoute>
         ),
       },

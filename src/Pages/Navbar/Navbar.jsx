@@ -87,7 +87,6 @@ const Navbar = () => {
 
   return (
     <div>
-      {/* fixed z-[10] mx-auto md:max-w-[768px] max-w-[428px] lg:max-w-[1400px] */}
       <div className="navbar bg-transparent">
         <div className="navbar-start">
           <div className="dropdown">
@@ -126,11 +125,6 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{navLinks}</ul>
         </div>
         <div className="navbar-end">
-          {/* <div className="text-white mr-10 text-3xl">
-            <NavLink to="/cart">
-              <BsCart3></BsCart3>
-            </NavLink>
-          </div> */}
           {user?.email ? (
             <div className="dropdown dropdown-end">
               <label tabIndex={0} className="btn btn-ghost btn-circle avatar">

@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import useAxiosSecure from '../../Components/Hooks/useAxiosSecure';
 import { AuthContext } from '../../Providers/AuthProvider';
@@ -6,6 +7,7 @@ import { AuthContext } from '../../Providers/AuthProvider';
 const AddProductsPage = () => {
   const { user } = useContext(AuthContext);
   const axiosSecure = useAxiosSecure();
+  const navigate = useNavigate();
 
   const handleAdd = e => {
     e.preventDefault();
@@ -31,6 +33,7 @@ const AddProductsPage = () => {
           text: ` Product added to the cart.`,
           icon: 'success',
         });
+        navigate('/myProducts');
       }
     });
   };

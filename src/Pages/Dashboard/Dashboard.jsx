@@ -1,6 +1,5 @@
 import { useContext } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
-import '../../Components/Styles/texteffect.css';
 import { Link } from 'react-router-dom';
 
 const Dashboard = () => {
@@ -23,7 +22,7 @@ const Dashboard = () => {
             className="card-body items-center text-center"
             style={{ color: '#ffffff' }}
           >
-            <h2 className="card-title text-flicker-in-glow">My Profile</h2>
+            <h2 className="card-title">My Profile</h2>
             <div className="card-actions mt-10">
               <Link to="/myProfile">
                 <button
@@ -60,7 +59,7 @@ const Dashboard = () => {
             className="card-body items-center text-center"
             style={{ color: '#ffffff' }}
           >
-            <h2 className="card-title text-flicker-in-glow">Add Product</h2>
+            <h2 className="card-title">Add Product</h2>
             <div className="card-actions mt-10">
               <Link to="/addProducts">
                 <button
@@ -98,7 +97,7 @@ const Dashboard = () => {
           className="card-body items-center text-center"
           style={{ color: '#ffffff' }}
         >
-          <h2 className="card-title text-flicker-in-glow">My Product</h2>
+          <h2 className="card-title">My Product</h2>
           <div className="card-actions mt-10">
             <Link to="/myProducts">
               <button

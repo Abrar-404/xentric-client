@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
+import { ClimbingBoxLoader } from 'react-spinners';
 import { AuthContext } from '../Providers/AuthProvider';
 
 // eslint-disable-next-line react/prop-types
@@ -9,11 +10,8 @@ const PrivateRoute = ({ children }) => {
 
   if (loading) {
     return (
-      <div className="h-[100vh]">
-        <img
-          className="text-center mt-40 mx-auto flex justify-center"
-          src="https://i.ibb.co/Kz2Xnfy/bece0c797cb134aefb2cb836578c9249.gif"
-        ></img>
+      <div className="flex justify-center h-[100vh] space-y-96 items-center">
+        <ClimbingBoxLoader className="" color="#36d7b7" size={48} />
       </div>
     );
   }

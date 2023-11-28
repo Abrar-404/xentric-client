@@ -37,7 +37,11 @@ const AddProductsPage = () => {
 
   return (
     <div>
-      <div className="hero min-h-screen bg-transparent">
+      <h1 className="text-center text-3xl mt-32 font-vermin">
+        <span className="text-red-700">Add</span>{' '}
+        <span className="text-white">Products</span>
+      </h1>
+      <div className="hero min-h-screen mt-10 bg-transparent">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="card shrink-0 w-full max-w-sm shadow-2xl  button-85">
             <form onSubmit={handleAdd} className="card-body">

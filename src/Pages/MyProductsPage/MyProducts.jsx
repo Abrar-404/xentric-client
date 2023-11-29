@@ -90,7 +90,7 @@ const MyProducts = () => {
                               {item?.name}
                             </h1>
                           ) : (
-                            'name'
+                            item?.product
                           )}
                         </div>
                       </div>

@@ -3,8 +3,9 @@ import { useContext } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
 
 const UpdateForm = () => {
-  const update = useLoaderData();
-  const { img, name, price, description } = update || {};
+  const item = useLoaderData();
+  console.log(item);
+  // const { img, name, price, description } = item || {};
   const { user } = useContext(AuthContext);
 
   return (

@@ -1,7 +1,8 @@
 import useCarts from './../../Components/Hooks/useCarts';
-import { FaTrashAlt } from 'react-icons/fa';
+import { FaTrashAlt, FaEdit } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 import useAxiosSecure from '../../Components/Hooks/useAxiosSecure';
+import { Link } from 'react-router-dom';
 
 const MyProducts = () => {
   const [cart, refetch] = useCarts();
@@ -108,7 +109,11 @@ const MyProducts = () => {
                     </button>
                   </td>
                   <th>
-                    <button className="btn btn-ghost btn-xs">Update</button>
+                    <Link to={`/updateProducts/${item._id}`}>
+                      <button className="btn text-2xl text-white btn-ghost btn-xs">
+                        <FaEdit />
+                      </button>
+                    </Link>
                   </th>
                 </tr>
               ))}

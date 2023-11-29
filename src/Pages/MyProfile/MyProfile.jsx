@@ -14,9 +14,22 @@ const MyProfile = () => {
           />
         </div>
 
-        <h1 className="text-center mt-10 text-3xl text-white font-noto-serif font-bold">
-          {user?.displayName}
-        </h1>
+        <div className="diff lg:aspect-[16/3] md:aspect-[8/3] aspect-[5/3] mt-5">
+          <div className="diff-item-1">
+            <div className="  text-secondary  lg:text-8xl md:text-6xl text-4xl font-black grid place-content-center">
+              {user?.displayName}
+            </div>
+          </div>
+          <div className="diff-item-2">
+            <div
+              className=" lg:text-8xl md:text-6xl text-4xl text-white
+             font-black grid place-content-center"
+            >
+              <h1>{user?.displayName}</h1>
+            </div>
+          </div>
+          <div className="diff-resizer"></div>
+        </div>
 
         <h1 className="text-center mt-10 text-xl text-white">
           Email : {user?.email}

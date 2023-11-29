@@ -1,11 +1,43 @@
 import useCarts from './../../Components/Hooks/useCarts';
+import { FaTrashAlt } from 'react-icons/fa';
+import Swal from 'sweetalert2';
+import useAxiosSecure from '../../Components/Hooks/useAxiosSecure';
+
 const MyProducts = () => {
-  const [cart] = useCarts();
+  const [cart, refetch] = useCarts();
+  const axiosSecure = useAxiosSecure();
   const totalPrice = cart.reduce((total, item) => total + item.price, 0);
+
+  const handleDelete = id => {
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      color: 'white',
+      background: '#121041',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!',
+    }).then(result => {
+      if (result.isConfirmed) {
+        axiosSecure.delete(`/myProducts/${id}`).then(res => {
+          if (res.data.deletedCount > 0) {
+            refetch();
+            Swal.fire({
+              title: 'Deleted!',
+              text: 'Your file has been deleted.',
+              icon: 'success',
+            });
+          }
+        });
+      }
+    });
+  };
 
   return (
     <div>
-      <div className="flex flex-col lg:flex-row md:flex-col mx-auto justify-between mb-20 mt-20 gap-5">
+      <div className="flex flex-col lg:flex-row md:flex-col mx-auto justify-evenly mb-20 mt-20 gap-5">
         <h1 className="lg:text-3xl md:text-3xl text-xl text-white">
           Items : {cart?.length}
         </h1>
@@ -52,19 +84,29 @@ const MyProducts = () => {
                       </div>
                       <div>
                         <div className="font-bold text-white">
-                          <h1 className="font-bold text-white">Hart Hagerty</h1>
-                        </div>
-                        <div className="text-sm opacity-50 text-white">
-                          United States
+                          {item?.name ? (
+                            <h1 className="font-bold text-white">
+                              {item?.name}
+                            </h1>
+                          ) : (
+                            'name'
+                          )}
                         </div>
                       </div>
                     </div>
                   </td>
                   <td className="text-white">
-                    Zemlak, Daniel and Leannon
+                    3
                     <br />
                   </td>
-                  <td className="text-white">Purple</td>
+                  <td className="">
+                    <button
+                      onClick={() => handleDelete(item?._id)}
+                      className="btn btn-ghost text-red-700 text-2xl"
+                    >
+                      <FaTrashAlt></FaTrashAlt>
+                    </button>
+                  </td>
                   <th>
                     <button className="btn btn-ghost btn-xs">Update</button>
                   </th>

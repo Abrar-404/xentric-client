@@ -3,7 +3,7 @@ import '../../Components/Styles/button.css';
 
 // eslint-disable-next-line react/prop-types
 const TrendingCards = ({ trending }) => {
-  const { img, name, _id } = trending || {};
+  const { img, name, _id, price } = trending || {};
 
   return (
     <div className="">
@@ -19,6 +19,9 @@ const TrendingCards = ({ trending }) => {
           <div className="card-body">
             <Link to={`/trendingCards/${_id}`}>
               <h2 className="card-title text-white font-share">{name}</h2>
+              <h2 className="card-title text-white font-share">
+                Price : ${price}
+              </h2>
             </Link>
             <div className="card-actions justify-start">
               <button className="btn button-85">Upvote</button>

@@ -3,36 +3,42 @@
     "img": "https://i.ibb.co/t8nbQ3d/41-ZCI6qw8o-L-AC-UF1000-1000-QL80.jpg",
     "name": "QuantumX Pro VR Headset",
     "description": "Immerse yourself in virtual reality with the QuantumX Pro VR Headset.",
-    "more": "https://www.pcmag.com/picks/the-best-vr-headsets"
+    "more": "https://www.pcmag.com/picks/the-best-vr-headsets",
+    "price": 200
   },
   {
     "img": "https://i.ibb.co/vZc5psX/Apple-delivers-apple-watch-series-6-09152020-jpg-news-app-ed.jpg",
     "name": "NeuraSync Smart Watch 3.0",
     "description": "Stay connected and track your fitness with the NeuraSync Smart Watch 3.0.",
-    "more": "https://www.amazon.in/Hammer-Ace-3-0-Bluetooth-Metallic/dp/B0BV6FVKSP"
+    "more": "https://www.amazon.in/Hammer-Ace-3-0-Bluetooth-Metallic/dp/B0BV6FVKSP",
+    "price": 290
   },
   {
     "img": "https://i.ibb.co/g4HNG6L/ur75-5g-network.jpg",
     "name": "AeroBeam Ultra 5G Router",
     "description": "Experience lightning-fast internet with the AeroBeam Ultra 5G Router.",
-    "more": "https://www.milesight.com/iot/product/5g/ur75"
+    "more": "https://www.milesight.com/iot/product/5g/ur75",
+    "price": 150
   },
   {
     "img": "https://i.ibb.co/fkTtz43/presenting-at-canaccord-genuity.jpg",
     "name": "NexGen AI Drone Explorer",
     "description": "Explore the skies with the NexGen AI Drone Explorer.",
-    "more": "https://www.startech.com.bd/drone"
+    "more": "https://www.startech.com.bd/drone",
+    "price": 900
   },
   {
     "img": "https://i.ibb.co/QQgpZ2p/samsung-980-pro-anunci.webp",
     "name": "ZetaDrive Quantum SSD 1TB",
     "description": "Enhance your system's performance with the ZetaDrive Quantum SSD 1TB.",
-    "more": "https://startech.com.bd/component/SSD-Hard-Disk"
+    "more": "https://startech.com.bd/component/SSD-Hard-Disk",
+    "price": 120
   },
   {
     "img": "https://i.ibb.co/Pw3yYVd/2022-08-08-image-2.jpg",
     "name": "XenonPod 8K HDR Gaming Monitor",
     "description": "Immerse yourself in stunning visuals with the XenonPod 8K HDR Gaming Monitor.",
-    "more": "https://www.amazon.com/8k-monitor/s?k=8k+monitor"
+    "more": "https://www.amazon.com/8k-monitor/s?k=8k+monitor",
+    "price": 800
   }
 ]

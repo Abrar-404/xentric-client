@@ -1,7 +1,79 @@
+import useCarts from './../../Components/Hooks/useCarts';
 const MyProducts = () => {
+  const [cart] = useCarts();
+  const totalPrice = cart.reduce((total, item) => total + item.price, 0);
+
   return (
     <div>
-      <h1>My Products</h1>
+      <div className="flex flex-col lg:flex-row md:flex-col mx-auto justify-between mb-20 mt-20 gap-5">
+        <h1 className="lg:text-3xl md:text-3xl text-xl text-white">
+          Items : {cart?.length}
+        </h1>
+        <h1 className="lg:text-3xl md:text-3xl text-xl text-white">
+          Total Price : {totalPrice}
+        </h1>
+        <div>
+          <button className="btn btn-secondary">Pay Now</button>
+        </div>
+      </div>
+
+      <div>
+        <div className="overflow-x-auto">
+          <table className="table">
+            {/* head */}
+            <thead>
+              <tr>
+                <th>
+                  <h1 className="text-white">Status</h1>
+                </th>
+                <th className="text-white">
+                  <h1 className="text-white">Product Name</h1>
+                </th>
+                <th className="text-white">Votes</th>
+                <th className="text-white">Delete</th>
+                <th className="text-white">Update</th>
+              </tr>
+            </thead>
+            <tbody>
+              {cart?.map(item => (
+                <tr key={item._id}>
+                  <td>
+                    <h1 className="text-white">Active</h1>
+                  </td>
+                  <td>
+                    <div className="flex items-center gap-3">
+                      <div className="avatar">
+                        <div className="mask mask-squircle w-12 h-12">
+                          <img
+                            src={item?.img}
+                            alt="Avatar Tailwind CSS Component"
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <div className="font-bold text-white">
+                          <h1 className="font-bold text-white">Hart Hagerty</h1>
+                        </div>
+                        <div className="text-sm opacity-50 text-white">
+                          United States
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td className="text-white">
+                    Zemlak, Daniel and Leannon
+                    <br />
+                  </td>
+                  <td className="text-white">Purple</td>
+                  <th>
+                    <button className="btn btn-ghost btn-xs">Update</button>
+                  </th>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   );
 };

@@ -15,6 +15,7 @@ const AddProductsPage = () => {
     const product = form.product.value;
     const image = form.image.value;
     const description = form.description.value;
+    const price = form.price.value;
 
     console.log(product, image, description);
 
@@ -23,6 +24,7 @@ const AddProductsPage = () => {
       product,
       image,
       description,
+      price
     };
 
     axiosSecure.post('/myProducts', addProductItem).then(res => {
@@ -97,6 +99,18 @@ const AddProductsPage = () => {
                   className="input input-bordered text-black"
                   required
                   name="description"
+                />
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text text-white">Price</span>
+                </label>
+                <input
+                  type="number"
+                  placeholder="Price"
+                  className="input input-bordered text-black"
+                  required
+                  name="price"
                 />
               </div>
               <div className="form-control">

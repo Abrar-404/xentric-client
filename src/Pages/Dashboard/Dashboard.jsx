@@ -75,41 +75,41 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-      </div>
 
-      {/* my products */}
+        {/* my products */}
 
-      <div
-        className="card w-60 flex justify-center items-center mx-auto mt-20"
-        style={{
-          background: '#141146',
-          boxShadow: '0 0 20px 10px #db0353, 0 0 40px 20px #db0353',
-        }}
-      >
-        <figure className="px-10 pt-10">
-          <img
-            src="https://i.ibb.co/RPXBSDw/7S7F.gif"
-            alt="Product"
-            className="rounded-full"
-          />
-        </figure>
         <div
-          className="card-body items-center text-center"
-          style={{ color: '#ffffff' }}
+          className="card w-60"
+          style={{
+            background: '#141146',
+            boxShadow: '0 0 20px 10px #db0353, 0 0 40px 20px #db0353',
+          }}
         >
-          <h2 className="card-title">My Product</h2>
-          <div className="card-actions mt-10">
-            <Link to="/myProducts">
-              <button
-                style={{
-                  background: '#141146',
-                  boxShadow: '0 0 20px 10px #db0353, 0 0 40px 20px #db0353',
-                }}
-                className="btn mb-5"
-              >
-                <span style={{ color: '#ffffff' }}>Go There</span>
-              </button>
-            </Link>
+          <figure className="px-10 pt-10">
+            <img
+              src="https://i.ibb.co/RPXBSDw/7S7F.gif"
+              alt="Product"
+              className="rounded-full"
+            />
+          </figure>
+          <div
+            className="card-body items-center text-center"
+            style={{ color: '#ffffff' }}
+          >
+            <h2 className="card-title">My Product</h2>
+            <div className="card-actions mt-10">
+              <Link to="/myProducts">
+                <button
+                  style={{
+                    background: '#141146',
+                    boxShadow: '0 0 20px 10px #db0353, 0 0 40px 20px #db0353',
+                  }}
+                  className="btn mb-5"
+                >
+                  <span style={{ color: '#ffffff' }}>Go There</span>
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

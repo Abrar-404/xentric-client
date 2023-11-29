@@ -7,10 +7,10 @@ import useAxiosSecure from './../../Components/Hooks/useAxiosSecure';
 import useCarts from './../../Components/Hooks/useCarts';
 const AddProductsForm = () => {
   const items = useLoaderData();
-  const { img, name, description, more, _id } = items || {};
+  const { img, name, description, more, _id, price } = items || {};
   const { user } = useContext(AuthContext);
   const axiosSecure = useAxiosSecure();
-  const [, refetch] = useCarts()
+  const [, refetch] = useCarts();
 
   const handleAddItems = e => {
     e.preventDefault();
@@ -21,6 +21,7 @@ const AddProductsForm = () => {
       img,
       description,
       more,
+      price,
     };
     axiosSecure.post('/myProducts', productItem).then(res => {
       console.log(res.data);
@@ -32,8 +33,8 @@ const AddProductsForm = () => {
           imageWidth: 400,
           imageHeight: 200,
           imageAlt: 'Custom image',
-        })
-        refetch()
+        });
+        refetch();
       }
     });
   };
@@ -67,6 +68,7 @@ const AddProductsForm = () => {
                     <h1>{name}</h1>
                   </div>
                   <div className="mb-5 text-center">{description}</div>
+                  <div className="mb-5 text-center">Price : {price}</div>
                 </div>
               </div>
 

@@ -1,117 +1,89 @@
+import { NavLink, Outlet } from 'react-router-dom';
+import { BiSolidCartAlt } from 'react-icons/bi';
+import { FaHome, FaUtensils } from 'react-icons/fa';
+import useCarts from '../../Components/Hooks/useCarts';
+import useAdmin from './../../Components/Hooks/useAdmin';
+import '../../Components/Styles/button.css';
 import { useContext } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
-import { Link } from 'react-router-dom';
 
 const Dashboard = () => {
+  const [cart] = useCarts();
+  const [isAdmin] = useAdmin();
   const { user } = useContext(AuthContext);
+
   return (
-    <div className="max-h-screen">
-      <div className="mt-32 flex lg:flex-row md:flex-row flex-col mx-auto items-center justify-center gap-32">
-        {/* My Profile */}
-        <div
-          className="card w-60"
-          style={{
-            background: '#141146',
-            boxShadow: '0 0 20px 10px #db0353, 0 0 40px 20px #db0353',
-          }}
-        >
-          <figure className="px-10 pt-10">
-            <img src={user?.photoURL} alt="user" className="rounded-full" />
-          </figure>
-          <div
-            className="card-body items-center text-center"
-            style={{ color: '#ffffff' }}
-          >
-            <h2 className="card-title">My Profile</h2>
-            <div className="card-actions mt-10">
-              <Link to="/myProfile">
-                <button
-                  style={{
-                    background: '#141146',
-                    boxShadow: '0 0 20px 10px #db0353, 0 0 40px 20px #db0353',
-                  }}
-                  className="btn mb-5"
-                >
-                  <span style={{ color: '#ffffff' }}>Go To Profile</span>
-                </button>
-              </Link>
-            </div>
+    <div className="flex">
+      {/* dashboard sidebar */}
+
+      <div className="w-64 min-h-screen bg-[#1A186C] button-85">
+        <ul className="menu p-4">
+          {isAdmin ? (
+            <>
+              <li>
+                <NavLink to="/myProfile">
+                  {' '}
+                  <FaHome></FaHome> My Profile
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/addProducts">
+                  {' '}
+                  <FaUtensils></FaUtensils> Add Products
+                </NavLink>
+              </li>
+            </>
+          ) : (
+            <>
+              <img
+                className="w-[100px] h-[100px] rounded-full"
+                src={user?.photoURL}
+                alt=""
+              />
+              <li>
+                <NavLink to="/addProducts">
+                  {' '}
+                  <BiSolidCartAlt></BiSolidCartAlt> Add Products
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/myProfile">
+                  {' '}
+                  <FaHome></FaHome> My Profile
+                </NavLink>
+              </li>
+
+              <li>
+                <NavLink to="/myProducts">
+                  {' '}
+                  <BiSolidCartAlt></BiSolidCartAlt>My Cart : ({cart.length})
+                </NavLink>
+              </li>
+            </>
+          )}
+          <hr />
+        </ul>
+      </div>
+
+      <div className="diff lg:aspect-[10/2] md:aspect-[8/3] aspect-[5/3] mt-5">
+        <div className="diff-item-1">
+          <div className="  text-secondary  lg:text-8xl md:text-6xl text-4xl font-black grid place-content-center">
+            {user?.displayName}
           </div>
         </div>
-
-        {/* add products */}
-
-        <div
-          className="card w-60"
-          style={{
-            background: '#141146',
-            boxShadow: '0 0 20px 10px #db0353, 0 0 40px 20px #db0353',
-          }}
-        >
-          <figure className="px-10 pt-10">
-            <img
-              src="https://i.ibb.co/RPXBSDw/7S7F.gif"
-              alt="Product"
-              className="rounded-full"
-            />
-          </figure>
+        <div className="diff-item-2">
           <div
-            className="card-body items-center text-center"
-            style={{ color: '#ffffff' }}
+            className=" lg:text-8xl md:text-6xl text-4xl text-white
+             font-black grid place-content-center"
           >
-            <h2 className="card-title">Add Product</h2>
-            <div className="card-actions mt-10">
-              <Link to="/addProducts">
-                <button
-                  style={{
-                    background: '#141146',
-                    boxShadow: '0 0 20px 10px #db0353, 0 0 40px 20px #db0353',
-                  }}
-                  className="btn mb-5"
-                >
-                  <span style={{ color: '#ffffff' }}>Here You Go</span>
-                </button>
-              </Link>
-            </div>
+            <h1>{user?.displayName}</h1>
           </div>
         </div>
+        <div className="diff-resizer"></div>
+      </div>
 
-        {/* my products */}
-
-        <div
-          className="card w-60"
-          style={{
-            background: '#141146',
-            boxShadow: '0 0 20px 10px #db0353, 0 0 40px 20px #db0353',
-          }}
-        >
-          <figure className="px-10 pt-10">
-            <img
-              src="https://i.ibb.co/RPXBSDw/7S7F.gif"
-              alt="Product"
-              className="rounded-full"
-            />
-          </figure>
-          <div
-            className="card-body items-center text-center"
-            style={{ color: '#ffffff' }}
-          >
-            <h2 className="card-title">My Product</h2>
-            <div className="card-actions mt-10">
-              <Link to="/myProducts">
-                <button
-                  style={{
-                    background: '#141146',
-                    boxShadow: '0 0 20px 10px #db0353, 0 0 40px 20px #db0353',
-                  }}
-                  className="btn mb-5"
-                >
-                  <span style={{ color: '#ffffff' }}>Go There</span>
-                </button>
-              </Link>
-            </div>
-          </div>
-        </div>
+      <div className="flex-1 p-8">
+        <Outlet></Outlet>
       </div>
     </div>
   );

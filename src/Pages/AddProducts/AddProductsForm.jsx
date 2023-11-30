@@ -37,6 +37,21 @@ const AddProductsForm = () => {
         refetch();
       }
     });
+
+    axiosSecure.post('/allItem', productItem).then(res => {
+      console.log(res.data);
+      if (res.data.insertedId) {
+        Swal.fire({
+          title: `Bingo!`,
+          text: ` ${name} added to the cart.`,
+          imageUrl: `${img}`,
+          imageWidth: 400,
+          imageHeight: 200,
+          imageAlt: 'Custom image',
+        });
+        refetch();
+      }
+    });
   };
 
   return (

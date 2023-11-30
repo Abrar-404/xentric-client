@@ -21,6 +21,7 @@ import Dashboard from './Pages/Dashboard/Dashboard';
 import MyProfile from './Pages/MyProfile/MyProfile';
 import UpdateForm from './Pages/Update/UpdateForm';
 import AllProductLoader from './Pages/AllProduct/AllProductLoader';
+import AllProductDetails from './Pages/AllProduct/AllProductDetails';
 
 const queryClient = new QueryClient();
 
@@ -123,6 +124,26 @@ const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(`http://localhost:5000/trendingCards/${params.id}`),
+      },
+      {
+        path: '/addProductsForm/:id',
+        element: (
+          <PrivateRoute>
+            <AddProductsForm></AddProductsForm>
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/allItem/${params.id}`),
+      },
+      {
+        path: '/allItem/:id',
+        element: (
+          <PrivateRoute>
+            <AllProductDetails></AllProductDetails>
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/allItem/${params.id}`),
       },
     ],
   },

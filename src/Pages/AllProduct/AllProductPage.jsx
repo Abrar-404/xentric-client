@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 // eslint-disable-next-line react/prop-types
 const AllProductPage = ({ item }) => {
   const { name, img, price, _id } = item || {};
+  console.log(item);
 
   return (
     <div>
@@ -15,7 +16,7 @@ const AllProductPage = ({ item }) => {
           />
         </figure>
         <div className="card-body">
-          <Link to={`/trendingCards/${_id}`}>
+          <Link to={`/allItem/${_id}`}>
             <h2 className="card-title text-white font-share">{name}</h2>
             <h2 className="card-title text-white font-share">
               Price: ${price}

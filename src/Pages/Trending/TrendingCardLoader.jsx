@@ -26,7 +26,7 @@ const TrendingCardLoader = () => {
           ></TrendingCards>
         ))}
       </div>
-      <Link to="/products">
+      <Link to="/allItem">
         <div className="flex justify-center mt-10">
           <button className="button-57" role="button">
             <span>Show All Products</span>

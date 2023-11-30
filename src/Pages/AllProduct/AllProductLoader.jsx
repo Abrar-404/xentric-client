@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 import useAxiosPublic from '../../Components/Hooks/useAxiosPublic';
 import AllProductPage from './AllProductPage';
+import CustomPagination from './CustomPagination';
 
 const ITEMS_PER_PAGE = 20;
 
 const AllProductLoader = () => {
-  // Initialize state
   const axiosPublic = useAxiosPublic();
   const [itemsAll, setItemsAll] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -24,41 +24,28 @@ const AllProductLoader = () => {
     fetchData();
   }, [axiosPublic]);
 
-  // Calculate current items based on current page
   const indexOfLastItem = currentPage * ITEMS_PER_PAGE;
   const indexOfFirstItem = indexOfLastItem - ITEMS_PER_PAGE;
   const currentItems = itemsAll.slice(indexOfFirstItem, indexOfLastItem);
 
   const totalPages = Math.ceil(itemsAll.length / ITEMS_PER_PAGE);
 
-  // Handle page change
   const handlePageChange = page => {
     setCurrentPage(page);
   };
 
-  // Render component
   return (
     <div>
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 mx-auto mt-32">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10 mx-auto mt-32">
         {currentItems.map(item => (
           <AllProductPage key={item._id} item={item} />
         ))}
       </div>
 
-      {/* Pagination controls */}
-      <div className="pagination">
-        {Array.from({ length: totalPages }).map((_, index) => (
-          <button
-            key={index}
-            className={`pagination-btn ${
-              currentPage === index + 1 ? 'active' : ''
-            }`}
-            onClick={() => handlePageChange(index + 1)}
-          >
-            {index + 1}
-          </button>
-        ))}
-      </div>
+      <CustomPagination
+        totalPages={totalPages}
+        onPageChange={handlePageChange}
+      />
     </div>
   );
 };

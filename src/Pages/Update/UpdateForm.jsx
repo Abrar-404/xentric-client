@@ -18,7 +18,7 @@ const UpdateForm = () => {
   const axiosPublic = useAxiosPublic();
 
   const onSubmit = async data => {
-    console.log(data);
+    // console.log(data);
     // image upload to imgbb and then get an url
     const imageFile = { image: data?.image[0] };
     const res = await axiosPublic.post(image_hosting_api, imageFile, {
@@ -33,7 +33,9 @@ const UpdateForm = () => {
         description: data.description,
         price: parseFloat(data.price),
         image: res.data.display_url,
+        img: data.img,
       };
+      console.log(products);
       //
       const productRes = await axiosSecure.patch(
         `/myProducts/${_id}`,
@@ -46,7 +48,7 @@ const UpdateForm = () => {
         Swal.fire({
           position: 'top-end',
           icon: 'success',
-          title: `${name} is added to the menu.`,
+          title: `${data.name} is added to the menu.`,
           showConfirmButton: false,
           timer: 1500,
         });
@@ -88,10 +90,11 @@ const UpdateForm = () => {
                   <input
                     type="text"
                     placeholder="Product Name"
+                    {...register('name', { required: true })}
                     defaultValue={name || item?.product}
                     className="input input-bordered text-black"
                     required
-                    name="product"
+                    name="name"
                   />
                 </div>
                 <div className="form-control">
@@ -105,7 +108,7 @@ const UpdateForm = () => {
                     placeholder="E.g: https://i.ibb.co/8PXm9m2/1850380481.jpg"
                     className="input input-bordered text-black"
                     required
-                    name="image"
+                    name="img"
                   />
                 </div>
 
@@ -114,6 +117,7 @@ const UpdateForm = () => {
                     {...register('image', { required: true })}
                     type="file"
                     className="file-input w-full max-w-xs"
+                    name="image"
                   />
                 </div>
 
@@ -124,6 +128,7 @@ const UpdateForm = () => {
                   <input
                     type="text"
                     placeholder="Description"
+                    {...register('description', { required: true })}
                     defaultValue={description}
                     className="input input-bordered text-black"
                     required
@@ -137,6 +142,7 @@ const UpdateForm = () => {
                   <input
                     type="number"
                     placeholder="Price"
+                    {...register('price', { required: true })}
                     defaultValue={price}
                     className="input input-bordered text-black"
                     required

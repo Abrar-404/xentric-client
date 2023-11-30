@@ -1,5 +1,6 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
+// eslint-disable-next-line react/prop-types
 const AllProductPage = ({ item }) => {
   const { name, img, price, _id } = item || {};
 
@@ -17,7 +18,7 @@ const AllProductPage = ({ item }) => {
           <Link to={`/trendingCards/${_id}`}>
             <h2 className="card-title text-white font-share">{name}</h2>
             <h2 className="card-title text-white font-share">
-              Price : ${price}
+              Price: ${price}
             </h2>
           </Link>
           <div className="card-actions justify-start">

@@ -39,7 +39,7 @@ const Navbar = () => {
 
           <li className="">
             <button className="text-white button-85 btn-sm mr-2 mb-2 text-center">
-              <NavLink to="/products">Products</NavLink>
+              <NavLink to="/allItem">Products</NavLink>
             </button>
           </li>
           <li className="">
@@ -63,7 +63,7 @@ const Navbar = () => {
         <>
           <li className="">
             <button className="text-white button-85 btn-sm mr-2 mb-2 text-center">
-              <NavLink to="/products">Products</NavLink>
+              <NavLink to="/allItem">Products</NavLink>
             </button>
           </li>
           <li className="">

@@ -24,7 +24,7 @@ const AddProductsPage = () => {
       product,
       image,
       description,
-      price
+      price,
     };
 
     axiosSecure.post('/myProducts', addProductItem).then(res => {
@@ -36,6 +36,18 @@ const AddProductsPage = () => {
           icon: 'success',
         });
         navigate('/myProducts');
+      }
+    });
+
+    axiosSecure.post('/allItem', addProductItem).then(res => {
+      console.log(res.data);
+      if (res.data.insertedId) {
+        Swal.fire({
+          title: `Bingo!`,
+          text: ` Product added to the cart.`,
+          icon: 'success',
+        });
+        navigate('/allItem');
       }
     });
   };

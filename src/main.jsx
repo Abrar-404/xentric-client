@@ -20,6 +20,7 @@ import AddProductsPage from './Pages/AddProducts/AddProductsPage';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import MyProfile from './Pages/MyProfile/MyProfile';
 import UpdateForm from './Pages/Update/UpdateForm';
+import AllProductLoader from './Pages/AllProduct/AllProductLoader';
 
 const queryClient = new QueryClient();
 
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
       {
         path: '/trending',
         element: <TrendingCardLoader></TrendingCardLoader>,
+      },
+      {
+        path: '/allItem',
+        element: <AllProductLoader></AllProductLoader>,
       },
       {
         path: '/myProducts',

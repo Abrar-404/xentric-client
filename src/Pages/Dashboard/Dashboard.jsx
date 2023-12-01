@@ -7,6 +7,7 @@ import '../../Components/Styles/button.css';
 import { useContext } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
 import useModerator from './../../Components/Hooks/useModerator';
+import { PieChart } from '../../Components/PieChart.jsx/PieChart';
 
 const Dashboard = () => {
   const [cart] = useCarts();
@@ -15,6 +16,11 @@ const Dashboard = () => {
   console.log(isAdmin);
   console.log(isModerator);
   const { user } = useContext(AuthContext);
+
+  const productData = cart.map(item => ({
+    name: item?.name || item?.product || 'Unknown Product',
+    price: item?.price || 0,
+  }));
 
   return (
     <>
@@ -104,7 +110,7 @@ const Dashboard = () => {
           </ul>
         </div>
 
-        <div className="diff lg:aspect-[10/2] md:aspect-[8/3] aspect-[5/3] mt-5">
+        {/* <div className="diff lg:aspect-[10/2] md:aspect-[8/3] aspect-[5/3] mt-5">
           <div className="diff-item-1">
             <div className="  text-secondary  lg:text-8xl md:text-6xl text-4xl font-black grid place-content-center">
               {user?.displayName}
@@ -119,7 +125,9 @@ const Dashboard = () => {
             </div>
           </div>
           <div className="diff-resizer"></div>
-        </div>
+        </div> */}
+
+        <PieChart productData={productData} />
 
         <div className="flex-1 p-8">
           <Outlet></Outlet>

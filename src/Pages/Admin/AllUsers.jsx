@@ -30,6 +30,19 @@ const AllUsers = () => {
       }
     });
   };
+  const handleMakeModerator = user => {
+    axiosSecure.patch(`/users/moderator/${user._id}`).then(res => {
+      console.log(res.data);
+      if (res.data.modifiedCount > 0) {
+        refetch();
+        Swal.fire({
+          title: 'Success!',
+          text: `${user?.name} is a Moderator now`,
+          icon: 'success',
+        });
+      }
+    });
+  };
 
   const handleDeleteUser = id => {
     Swal.fire({
@@ -115,11 +128,11 @@ const AllUsers = () => {
                     <br />
                   </td>
                   <td className="">
-                    {user.role === 'admin' ? (
-                      'Admin'
+                    {user.role === 'moderator' ? (
+                      'Moderator'
                     ) : (
                       <button
-                        onClick={() => handleMakeAdmin(user)}
+                        onClick={() => handleMakeModerator(user)}
                         className="btn text-2xl text-white btn-ghost btn-xs"
                       >
                         <FaUsers />

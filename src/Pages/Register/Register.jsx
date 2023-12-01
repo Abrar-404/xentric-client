@@ -8,16 +8,26 @@ import '../../Components/Styles/button.css';
 import '../../Components/Styles/button2.css';
 import '../../Components/Styles/form.css';
 import { AuthContext } from '../../Providers/AuthProvider';
+import useAxiosPublic from '../../Components/Hooks/useAxiosPublic';
 
 const Register = () => {
   const { registerUser, googleRegister } = useContext(AuthContext);
   const [errorRegi, setErrorRegi] = useState('');
   const [successRegi, setSuccessRegi] = useState('');
   const naviGate = useNavigate();
+  const axiosPublic = useAxiosPublic();
 
   const handleGoogleSignIn = () => {
     googleRegister()
       .then(result => {
+        const userInfo = {
+          email: result.user?.email,
+          name: result.user?.displayName,
+        };
+        axiosPublic.post('/users', userInfo)
+          .then(res => {
+          console.log(res.data);
+        })
         Swal.fire({
           imageUrl: `https://i.ibb.co/H4HnLmL/yippee-yay.gif`,
           title: 'WOOHOOO!!!! Welcome To The World!!!!',
@@ -108,21 +118,30 @@ const Register = () => {
     registerUser(email, password)
       .then(result => {
         console.log(result);
-        Swal.fire({
-          imageUrl: `https://i.ibb.co/H4HnLmL/yippee-yay.gif`,
-          title: 'WOOHOOO!!!! Welcome To The World!!!!',
-          width: 600,
-          padding: '3em',
-          color: '#7CFC00',
-          background: '#fff url()',
-          backdrop: `
+        const userInfo = {
+          name: name,
+          password: password,
+        };
+        axiosPublic.post('/users', userInfo).then(res => {
+          if (res.data.insertedId) {
+            console.log('user added to the database');
+            Swal.fire({
+              imageUrl: `https://i.ibb.co/H4HnLmL/yippee-yay.gif`,
+              title: 'WOOHOOO!!!! Welcome To The World!!!!',
+              width: 600,
+              padding: '3em',
+              color: '#7CFC00',
+              background: '#fff url()',
+              backdrop: `
     rgba(0,0,123,0.4)
     top
     no-repeat
   `,
+            });
+            naviGate('/login');
+            setSuccessRegi();
+          }
         });
-        naviGate('/login');
-        setSuccessRegi();
       })
       .catch(error => {
         console.error(error);

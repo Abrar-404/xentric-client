@@ -7,16 +7,25 @@ import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from '../../Providers/AuthProvider';
 import axios from 'axios';
 import '../../Components/Styles/button3.css';
+import useAxiosPublic from './../../Components/Hooks/useAxiosPublic';
 
 const Login = () => {
   const { loginUser, googleRegister } = useContext(AuthContext);
   const [error, setError] = useState(null);
   const naviGate = useNavigate();
   const location = useLocation();
+  const axiosPublic = useAxiosPublic()
 
   const handleGoogleSignIn = () => {
     googleRegister()
       .then(result => {
+        const userInfo = {
+          email: result.user?.email,
+          name: result.user?.displayName,
+        };
+        axiosPublic.post('/users', userInfo).then(res => {
+          console.log(res.data);
+        });
         Swal.fire({
           imageUrl: `https://i.ibb.co/H4HnLmL/yippee-yay.gif`,
           title: 'WOOHOOO!!!! Welcome To The World!!!!',

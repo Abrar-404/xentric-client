@@ -10,6 +10,7 @@ import { AuthContext } from '../../Providers/AuthProvider';
 const Dashboard = () => {
   const [cart] = useCarts();
   const [isAdmin] = useAdmin();
+  console.log(isAdmin);
   const { user } = useContext(AuthContext);
 
   return (
@@ -65,6 +66,12 @@ const Dashboard = () => {
                   <BiSolidCartAlt></BiSolidCartAlt>My Cart : ({cart.length})
                 </NavLink>
               </li>
+              {/* <li>
+                <NavLink to="/allUsers">
+                  {' '}
+                  <FaUtensils></FaUtensils> Manage Users
+                </NavLink>
+              </li> */}
             </>
           )}
           <hr />
@@ -82,7 +89,7 @@ const Dashboard = () => {
             className=" lg:text-8xl md:text-6xl text-4xl text-white
              font-black grid place-content-center"
           >
-            <h1>{user?.displayName}</h1>
+            <h1>{user?.displayName || user?.name}</h1>
           </div>
         </div>
         <div className="diff-resizer"></div>

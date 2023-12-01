@@ -14,7 +14,7 @@ const Login = () => {
   const [error, setError] = useState(null);
   const naviGate = useNavigate();
   const location = useLocation();
-  const axiosPublic = useAxiosPublic()
+  const axiosPublic = useAxiosPublic();
 
   const handleGoogleSignIn = () => {
     googleRegister()
@@ -63,15 +63,16 @@ const Login = () => {
 
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log(email, password);
+    const name = e.target.name.value;
+    console.log(email, password, name);
 
-    loginUser(email, password)
+    loginUser(email, password, name)
       .then(result => {
         const loggedInUser = result?.user;
         console.log(loggedInUser);
-        const user = { email };
-        axios
-          .post('https://inn-tero-server.vercel.app/jwt', user, {
+        const user = { email, password, name };
+        axiosPublic
+          .post('/jwt', user, {
             withCredentials: true,
           })
           .then(res => {
@@ -135,6 +136,18 @@ const Login = () => {
               </div>
             )}
             <form onSubmit={handleLogin} className="card-body button-85">
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text text-white font-bold">Name</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Your name"
+                  className="input input-bordered button-85"
+                  required
+                  name="name"
+                />
+              </div>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text text-white font-bold">Email</span>

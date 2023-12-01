@@ -142,7 +142,7 @@ const Navbar = () => {
                 className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
               >
                 <li>
-                  <button className="btn text-base mb-2 btn-sm btn-ghost">
+                  <button className="btn text-base text-black mb-2 btn-sm btn-ghost">
                     {user?.displayName}
                   </button>
                 </li>

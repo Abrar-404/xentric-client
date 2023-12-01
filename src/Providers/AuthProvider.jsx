@@ -21,9 +21,9 @@ const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const axiosPublic = useAxiosPublic();
 
-  const registerUser = (email, password) => {
+  const registerUser = (email, password, name) => {
     setLoading(true);
-    return createUserWithEmailAndPassword(auth, email, password);
+    return createUserWithEmailAndPassword(auth, email, password, name);
   };
 
   const googleRegister = () => {
@@ -31,9 +31,9 @@ const AuthProvider = ({ children }) => {
     return signInWithPopup(auth, googleProvider);
   };
 
-  const loginUser = (email, password) => {
+  const loginUser = (email, password, name) => {
     setLoading(true);
-    return signInWithEmailAndPassword(auth, email, password);
+    return signInWithEmailAndPassword(auth, email, password, name);
   };
 
   const userLogOut = () => {
@@ -45,7 +45,7 @@ const AuthProvider = ({ children }) => {
     const unsubscribe = onAuthStateChanged(auth, currentUser => {
       setLoading(false);
       if (currentUser) {
-        const userInfo = { email: currentUser.email };
+        const userInfo = { email: currentUser.email, name: currentUser.name };
         axiosPublic.post('/jwt', userInfo).then(res => {
           if (res.data.token) {
             localStorage.setItem('access-token', res.data.token);
@@ -57,6 +57,7 @@ const AuthProvider = ({ children }) => {
         setLoading(false);
       }
       setUser(currentUser);
+      console.log('current user', currentUser);
     });
     return () => {
       unsubscribe();

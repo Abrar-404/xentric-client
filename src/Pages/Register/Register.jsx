@@ -24,10 +24,9 @@ const Register = () => {
           email: result.user?.email,
           name: result.user?.displayName,
         };
-        axiosPublic.post('/users', userInfo)
-          .then(res => {
+        axiosPublic.post('/users', userInfo).then(res => {
           console.log(res.data);
-        })
+        });
         Swal.fire({
           imageUrl: `https://i.ibb.co/H4HnLmL/yippee-yay.gif`,
           title: 'WOOHOOO!!!! Welcome To The World!!!!',
@@ -115,33 +114,30 @@ const Register = () => {
       return;
     }
 
-    registerUser(email, password)
+    registerUser(email, password, name)
       .then(result => {
-        console.log(result);
-        const userInfo = {
-          name: name,
-          password: password,
+        const InfoUser = {
+          email,
+          name,
         };
-        axiosPublic.post('/users', userInfo).then(res => {
-          if (res.data.insertedId) {
-            console.log('user added to the database');
-            Swal.fire({
-              imageUrl: `https://i.ibb.co/H4HnLmL/yippee-yay.gif`,
-              title: 'WOOHOOO!!!! Welcome To The World!!!!',
-              width: 600,
-              padding: '3em',
-              color: '#7CFC00',
-              background: '#fff url()',
-              backdrop: `
+        axiosPublic.post('/users', InfoUser).then(res => {
+          console.log(res.data);
+        });
+        Swal.fire({
+          imageUrl: `https://i.ibb.co/H4HnLmL/yippee-yay.gif`,
+          title: 'WOOHOOO!!!! Welcome To The World!!!!',
+          width: 600,
+          padding: '3em',
+          color: '#7CFC00',
+          background: '#fff url()',
+          backdrop: `
     rgba(0,0,123,0.4)
     top
     no-repeat
   `,
-            });
-            naviGate('/login');
-            setSuccessRegi();
-          }
         });
+        naviGate('/login');
+        console.log(result.user);
       })
       .catch(error => {
         console.error(error);

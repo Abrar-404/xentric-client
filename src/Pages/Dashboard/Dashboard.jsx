@@ -6,11 +6,14 @@ import useAdmin from './../../Components/Hooks/useAdmin';
 import '../../Components/Styles/button.css';
 import { useContext } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
+import useModerator from './../../Components/Hooks/useModerator';
 
 const Dashboard = () => {
   const [cart] = useCarts();
   const [isAdmin] = useAdmin();
+  const [isModerator] = useModerator();
   console.log(isAdmin);
+  console.log(isModerator);
   const { user } = useContext(AuthContext);
 
   return (
@@ -45,6 +48,21 @@ const Dashboard = () => {
                   <NavLink to="/allUsers">
                     {' '}
                     <FaUtensils></FaUtensils> Manage Users
+                  </NavLink>
+                </li>
+              </>
+            ) : isModerator ? (
+              <>
+                <li>
+                  <NavLink to="/review">
+                    {' '}
+                    <FaHome></FaHome> Products Review
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/reported">
+                    {' '}
+                    <FaUtensils></FaUtensils> Reported
                   </NavLink>
                 </li>
               </>

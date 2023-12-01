@@ -1,4 +1,5 @@
 import { Navigate, useLocation } from 'react-router-dom';
+import { CircleLoader } from 'react-spinners';
 import useAdmin from '../Components/Hooks/useAdmin';
 import useAuth from '../Components/Hooks/useAuth';
 
@@ -9,7 +10,11 @@ const AdminRoute = ({ children }) => {
   const location = useLocation();
 
   if (loading || isAdminLoading) {
-    return <progress className="progress w-56"></progress>;
+    return (
+      <div className="flex justify-center h-[100vh] space-y-96 items-center">
+        <CircleLoader className="" color="#36d7b7" size={96} />
+      </div>
+    );
   }
 
   if (user && isAdmin) {

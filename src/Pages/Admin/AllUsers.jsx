@@ -10,7 +10,7 @@ const AllUsers = () => {
     queryFn: async () => {
       const res = await axiosSecure.get('/users', {
         headers: {
-          authorization: `Bearer ${localStorage.getItem('access-token')}`
+          authorization: `Bearer ${localStorage.getItem('access-token')}`,
         },
       });
       return res.data;
@@ -72,21 +72,26 @@ const AllUsers = () => {
             <thead>
               <tr>
                 <th>
-                  <h1 className="text-white">Status</h1>
+                  <h1 className="text-white">Remove User</h1>
                 </th>
                 <th className="text-white">
                   <h1 className="text-white">Product Name</h1>
                 </th>
-                <th className="text-white">Votes</th>
-                <th className="text-white">Delete</th>
-                <th className="text-white">Manage Users</th>
+                <th className="text-white">User Email</th>
+                <th className="text-white">Make Moderator</th>
+                <th className="text-white">Make Admin</th>
               </tr>
             </thead>
             <tbody>
               {users?.map(user => (
                 <tr key={user._id}>
                   <td>
-                    <h1 className="text-white">Active</h1>
+                    <button
+                      onClick={() => handleDeleteUser(user?._id)}
+                      className="btn btn-ghost text-red-700 text-2xl"
+                    >
+                      <FaTrashAlt></FaTrashAlt>
+                    </button>
                   </td>
                   <td>
                     <div className="flex items-center gap-3">
@@ -106,16 +111,20 @@ const AllUsers = () => {
                     </div>
                   </td>
                   <td className="text-white">
-                    3
+                    {user.email}
                     <br />
                   </td>
                   <td className="">
-                    <button
-                      onClick={() => handleDeleteUser(user?._id)}
-                      className="btn btn-ghost text-red-700 text-2xl"
-                    >
-                      <FaTrashAlt></FaTrashAlt>
-                    </button>
+                    {user.role === 'admin' ? (
+                      'Admin'
+                    ) : (
+                      <button
+                        onClick={() => handleMakeAdmin(user)}
+                        className="btn text-2xl text-white btn-ghost btn-xs"
+                      >
+                        <FaUsers />
+                      </button>
+                    )}
                   </td>
                   <th>
                     {user.role === 'admin' ? (

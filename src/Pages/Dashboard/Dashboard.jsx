@@ -21,15 +21,21 @@ const Dashboard = () => {
           {isAdmin ? (
             <>
               <li>
-                <NavLink to="/myProfile">
+                <NavLink to="/statistics">
                   {' '}
-                  <FaHome></FaHome> My Profile
+                  <FaHome></FaHome> Statistics
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/addProducts">
+                <NavLink to="/coupons">
                   {' '}
-                  <FaUtensils></FaUtensils> Add Products
+                  <FaUtensils></FaUtensils> Manage Coupons
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/allUsers">
+                  {' '}
+                  <FaUtensils></FaUtensils> Manage Users
                 </NavLink>
               </li>
             </>

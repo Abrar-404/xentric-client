@@ -22,6 +22,7 @@ import MyProfile from './Pages/MyProfile/MyProfile';
 import UpdateForm from './Pages/Update/UpdateForm';
 import AllProductLoader from './Pages/AllProduct/AllProductLoader';
 import AllProductDetails from './Pages/AllProduct/AllProductDetails';
+import AllUsers from './Pages/Admin/AllUsers';
 
 const queryClient = new QueryClient();
 
@@ -93,6 +94,18 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
+
+      // Admin, moderator and users related
+      {
+        path: '/allUsers',
+        element: (
+          <PrivateRoute>
+            <AllUsers></AllUsers>,
+          </PrivateRoute>
+        ),
+      },
+      // Admin, moderator and users related
+
       {
         path: '/featureCards/:id',
         element: <FeatureCardDetails></FeatureCardDetails>,

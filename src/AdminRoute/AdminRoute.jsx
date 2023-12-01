@@ -1,7 +1,8 @@
 import { Navigate, useLocation } from 'react-router-dom';
-import useAuth from '../hooks/useAuth';
-import useAdmin from '../hooks/useAdmin';
+import useAdmin from '../Components/Hooks/useAdmin';
+import useAuth from '../Components/Hooks/useAuth';
 
+// eslint-disable-next-line react/prop-types
 const AdminRoute = ({ children }) => {
   const { user, loading } = useAuth();
   const [isAdmin, isAdminLoading] = useAdmin();

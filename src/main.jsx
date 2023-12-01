@@ -23,6 +23,7 @@ import UpdateForm from './Pages/Update/UpdateForm';
 import AllProductLoader from './Pages/AllProduct/AllProductLoader';
 import AllProductDetails from './Pages/AllProduct/AllProductDetails';
 import AllUsers from './Pages/Admin/AllUsers';
+import AdminRoute from './AdminRoute/AdminRoute';
 
 const queryClient = new QueryClient();
 
@@ -99,9 +100,11 @@ const router = createBrowserRouter([
       {
         path: '/allUsers',
         element: (
-          <PrivateRoute>
-            <AllUsers></AllUsers>,
-          </PrivateRoute>
+          <AdminRoute>
+            <PrivateRoute>
+              <AllUsers></AllUsers>,
+            </PrivateRoute>
+          </AdminRoute>
         ),
       },
       // Admin, moderator and users related

@@ -107,7 +107,6 @@ const UpdateForm = () => {
                     type="text"
                     placeholder="E.g: https://i.ibb.co/8PXm9m2/1850380481.jpg"
                     className="input input-bordered text-black"
-                    required
                     name="img"
                   />
                 </div>

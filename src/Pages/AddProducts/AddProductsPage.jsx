@@ -24,7 +24,7 @@ const AddProductsPage = () => {
       name,
       image,
       description,
-      price,
+      price: parseFloat(price),
     };
 
     axiosSecure.post('/myProducts', addProductItem).then(res => {

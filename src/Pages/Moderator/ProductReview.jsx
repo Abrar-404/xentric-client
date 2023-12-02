@@ -1,23 +1,11 @@
 import { FaCheck, FaEye, FaPen, FaTrashAlt } from 'react-icons/fa';
 import useAxiosSecure from './../../Components/Hooks/useAxiosSecure';
 import Swal from 'sweetalert2';
-// import { useQuery } from '@tanstack/react-query';
 import useCarts from './../../Components/Hooks/useCarts';
 
 const ProductReview = () => {
   const axiosSecure = useAxiosSecure();
-  const [cart] = useCarts();
-  // const { data: myProducts = [], refetch } = useQuery({
-  //   queryKey: ['myProducts'],
-  //   queryFn: async () => {
-  //     const res = await axiosSecure.get('/myProducts', {
-  //       headers: {
-  //         authorization: `Bearer ${localStorage.getItem('access-token')}`,
-  //       },
-  //     });
-  //     return res.data;
-  //   },
-  // });
+  const [cart, refetch] = useCarts();
 
   const handleDeleteUser = id => {
     Swal.fire({
@@ -34,7 +22,7 @@ const ProductReview = () => {
       if (result.isConfirmed) {
         axiosSecure.delete(`/myProducts/${id}`).then(res => {
           if (res.data.deletedCount > 0) {
-            // refetch();
+            refetch();
             Swal.fire({
               title: 'Deleted!',
               text: 'Your file has been deleted.',

@@ -24,6 +24,8 @@ import AllProductLoader from './Pages/AllProduct/AllProductLoader';
 import AllProductDetails from './Pages/AllProduct/AllProductDetails';
 import AllUsers from './Pages/Admin/AllUsers';
 import AdminRoute from './AdminRoute/AdminRoute';
+import ProductReview from './Pages/Moderator/ProductReview';
+import ModeratorRoute from './ModeratorRoute/ModeratorRoute';
 
 const queryClient = new QueryClient();
 
@@ -105,6 +107,16 @@ const router = createBrowserRouter([
               <AllUsers></AllUsers>,
             </PrivateRoute>
           </AdminRoute>
+        ),
+      },
+      {
+        path: '/productReview',
+        element: (
+          <ModeratorRoute>
+            <PrivateRoute>
+              <ProductReview></ProductReview>,
+            </PrivateRoute>
+          </ModeratorRoute>
         ),
       },
       // Admin, moderator and users related

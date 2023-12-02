@@ -12,16 +12,16 @@ const AddProductsPage = () => {
   const handleAdd = e => {
     e.preventDefault();
     const form = e.target;
-    const product = form.product.value;
+    const name = form.name.value;
     const image = form.image.value;
     const description = form.description.value;
     const price = form.price.value;
 
-    console.log(product, image, description);
+    console.log(name, image, description);
 
     const addProductItem = {
       email: user.email,
-      product,
+      name,
       image,
       description,
       price,
@@ -86,7 +86,7 @@ const AddProductsPage = () => {
                   placeholder="Product Name"
                   className="input input-bordered text-black"
                   required
-                  name="product"
+                  name="name"
                 />
               </div>
               <div className="form-control">

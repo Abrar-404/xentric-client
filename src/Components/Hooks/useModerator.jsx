@@ -17,6 +17,7 @@ const useModerator = () => {
 
       try {
         const res = await axiosSecure.get(`/user/moderator/${user.email}`);
+        console.log(res.data);
         return res.data?.moderator;
       } catch (error) {
         console.error('Error fetching isAdmin:', error);

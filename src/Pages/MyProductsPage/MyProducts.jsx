@@ -43,10 +43,16 @@ const MyProducts = () => {
           Items : {cart?.length}
         </h1>
         <h1 className="lg:text-3xl md:text-3xl text-xl text-white">
-          Total Price : {totalPrice}
+          Total Price : ${totalPrice}
         </h1>
         <div>
-          <button className="btn btn-secondary">Pay Now</button>
+          {cart?.length ? (
+            <Link to="/payment">
+              <button className="btn btn-secondary">Pay Now</button>
+            </Link>
+          ) : (
+            <button disabled className="btn btn-secondary">Pay Now</button>
+          )}
         </div>
       </div>
 

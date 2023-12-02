@@ -13,14 +13,14 @@ const useModerator = () => {
     queryKey: [user?.email, 'isModerator'],
     enabled: !loading,
     queryFn: async () => {
-      console.log('asking or checking is moderator', user);
+      // console.log('asking or checking is moderator', user);
 
       try {
         const res = await axiosSecure.get(`/user/moderator/${user.email}`);
-        console.log(res.data);
+        // console.log(res.data);
         return res.data?.moderator;
       } catch (error) {
-        console.error('Error fetching isAdmin:', error);
+        // console.error('Error fetching isAdmin:', error);
         return false;
       }
     },

@@ -26,6 +26,8 @@ import AllUsers from './Pages/Admin/AllUsers';
 import AdminRoute from './AdminRoute/AdminRoute';
 import ProductReview from './Pages/Moderator/ProductReview';
 import ModeratorRoute from './ModeratorRoute/ModeratorRoute';
+import Payment from './Pages/Payment/Payment';
+import AddForm from './Pages/AllProduct/AddForm';
 
 const queryClient = new QueryClient();
 
@@ -55,11 +57,20 @@ const router = createBrowserRouter([
         path: '/allItem',
         element: <AllProductLoader></AllProductLoader>,
       },
+
       {
         path: '/myProducts',
         element: (
           <PrivateRoute>
             <MyProducts></MyProducts>,
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: '/payment',
+        element: (
+          <PrivateRoute>
+            <Payment></Payment>,
           </PrivateRoute>
         ),
       },
@@ -98,7 +109,7 @@ const router = createBrowserRouter([
         ),
       },
 
-      // Admin, moderator and users related
+      // Admin, moderator and users related----------------------
       {
         path: '/allUsers',
         element: (
@@ -119,7 +130,7 @@ const router = createBrowserRouter([
           </ModeratorRoute>
         ),
       },
-      // Admin, moderator and users related
+      // Admin, moderator and users related------------------------
 
       {
         path: '/featureCards/:id',
@@ -168,6 +179,26 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <AllProductDetails></AllProductDetails>
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/allItem/${params.id}`),
+      },
+      {
+        path: '/addForm/:id',
+        element: (
+          <PrivateRoute>
+            <AddForm></AddForm>
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/allItem/${params.id}`),
+      },
+      {
+        path: '/addProducts/:id',
+        element: (
+          <PrivateRoute>
+            <AddProductsPage></AddProductsPage>
           </PrivateRoute>
         ),
         loader: ({ params }) =>

@@ -114,11 +114,13 @@ const Register = () => {
       return;
     }
 
-    registerUser(email, password, name)
+    registerUser(email, password, name, photo)
       .then(result => {
         const InfoUser = {
           email,
+          password,
           name,
+          photo,
         };
         axiosPublic.post('/users', InfoUser).then(res => {
           console.log(res.data);

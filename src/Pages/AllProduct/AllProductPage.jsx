@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 // eslint-disable-next-line react/prop-types
 const AllProductPage = ({ item }) => {
   const { name, img, price, _id } = item || {};
-  console.log(item);
+  // console.log(item);
 
   return (
     <div>
@@ -26,7 +26,7 @@ const AllProductPage = ({ item }) => {
             <button className="btn button-85">Upvote</button>
           </div>
           <div className="mt-10 w-full">
-            <Link to={`/addProductsForm/${_id}`}>
+            <Link to={`/addProducts/${_id}`}>
               <button className="btn button-85 w-full">Add Products</button>
             </Link>
           </div>

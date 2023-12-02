@@ -37,14 +37,14 @@ const useCarts = () => {
 
   // Check if the user is a moderator
   // const isModerator = user?.role === 'moderator';
-  console.log(isModerator);
+  // console.log(isModerator);
 
   // tanstack query
   const { refetch, data: cart = [] } = useQuery({
     queryKey: isModerator ? ['cart'] : ['cart', user?.email],
     queryFn: async () => {
       if (isModerator) {
-        console.log(isModerator);
+        // console.log(isModerator);
         // Fetch all products for moderators
         const res = await axiosSecure.get(`/allProducts`);
         return res.data;

@@ -5,9 +5,10 @@ import Swal from 'sweetalert2';
 import { AuthContext } from '../../Providers/AuthProvider';
 import useAxiosSecure from './../../Components/Hooks/useAxiosSecure';
 import useCarts from './../../Components/Hooks/useCarts';
-const AddProductsForm = () => {
+const AddForm = () => {
   const items = useLoaderData();
   const { img, name, description, more, _id, price } = items || {};
+  // console.log(items);
   const { user } = useContext(AuthContext);
   const axiosSecure = useAxiosSecure();
   const [, refetch] = useCarts();
@@ -23,7 +24,9 @@ const AddProductsForm = () => {
       more,
       price,
     };
-    axiosSecure.post('/myProducts', productItem).then(res => {
+    console.log(productItem);
+
+    axiosSecure.post('/allItem', productItem).then(res => {
       console.log(res.data);
       if (res.data.insertedId) {
         Swal.fire({
@@ -38,21 +41,28 @@ const AddProductsForm = () => {
       }
     });
 
-    axiosSecure.post('/allItem', productItem).then(res => {
-      // console.log(res.data);
-      console.log('Response from /allItem:', res.data);
-      if (res.data.insertedId) {
-        Swal.fire({
-          title: `Bingo!`,
-          text: ` ${name} added to the cart.`,
-          imageUrl: `${img}`,
-          imageWidth: 400,
-          imageHeight: 200,
-          imageAlt: 'Custom image',
-        });
-        refetch();
-      }
-    });
+    // axiosSecure
+    //   .post('/allItem', productItem)
+    //   .then(res => {
+    //     console.log('Response from /allItem:', res.data);
+
+    //     if (res.data && res.data.insertedId) {
+    //       Swal.fire({
+    //         title: `Bingo!`,
+    //         text: ` ${name} added to the cart.`,
+    //         imageUrl: `${img}`,
+    //         imageWidth: 400,
+    //         imageHeight: 200,
+    //         imageAlt: 'Custom image',
+    //       });
+    //       refetch();
+    //     } else {
+    //       console.error('Invalid response format from /allItem:', res.data);
+    //     }
+    //   })
+    //   .catch(error => {
+    //     console.error('Error from /allItem:', error);
+    //   });
   };
 
   return (
@@ -107,4 +117,4 @@ const AddProductsForm = () => {
   );
 };
 
-export default AddProductsForm;
+export default AddForm;

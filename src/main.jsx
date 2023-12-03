@@ -28,6 +28,7 @@ import ProductReview from './Pages/Moderator/ProductReview';
 import ModeratorRoute from './ModeratorRoute/ModeratorRoute';
 import Payment from './Pages/Payment/Payment';
 import AddForm from './Pages/AllProduct/AddForm';
+import Statistics from './Pages/Admin/Statistics';
 
 const queryClient = new QueryClient();
 
@@ -128,6 +129,16 @@ const router = createBrowserRouter([
               <ProductReview></ProductReview>,
             </PrivateRoute>
           </ModeratorRoute>
+        ),
+      },
+      {
+        path: '/statistics',
+        element: (
+          <AdminRoute>
+            <PrivateRoute>
+              <Statistics></Statistics>,
+            </PrivateRoute>
+          </AdminRoute>
         ),
       },
       // Admin, moderator and users related------------------------

@@ -3,7 +3,6 @@ import CardLoader from '../FeatureCards/CardLoader';
 import Footer from '../Footer/Footer';
 import RelaxMain from '../Relax/RelaxMain';
 import '../../Components/Styles/texteffect.css';
-import CouponsCard from '../CouponList/CouponsCard';
 import CouponList from './../CouponList/CouponList';
 
 const Home = () => {

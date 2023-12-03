@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider';
 
 const MyProfile = () => {
@@ -44,11 +45,13 @@ const MyProfile = () => {
               />
               <div className="text-left">
                 <p className="mb-10 text-white text-lg">Subscription</p>
-                <div className="card-actions justify-start">
-                  <button className="btn btn-secondary">
-                    Subscribe Now $20
-                  </button>
-                </div>
+                <Link to="/payment">
+                  <div className="card-actions justify-start">
+                    <button className="btn btn-secondary">
+                      Subscribe Now $20
+                    </button>
+                  </div>
+                </Link>
               </div>
             </div>
           </div>

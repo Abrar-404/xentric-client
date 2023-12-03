@@ -1,5 +1,5 @@
+// eslint-disable-next-line react/prop-types
 const CouponsCard = ({ coup }) => {
-  // console.log(coup);
   const { name } = coup || {};
 
   return (

@@ -1,4 +1,4 @@
-import { FaCheck, FaEye, FaPen, FaTrashAlt } from 'react-icons/fa';
+import { FaBookmark, FaCheck, FaEye, FaTrashAlt } from 'react-icons/fa';
 import useAxiosSecure from './../../Components/Hooks/useAxiosSecure';
 import Swal from 'sweetalert2';
 import useCarts from './../../Components/Hooks/useCarts';
@@ -7,6 +7,27 @@ import { Link } from 'react-router-dom';
 const ProductReview = () => {
   const axiosSecure = useAxiosSecure();
   const [cart, refetch] = useCarts();
+
+  const handleMakeFeature = item => {
+    axiosSecure.post('/featureCards', item).then(res => {
+      console.log(res.data);
+      if (res.data.insertedId) {
+        Swal.fire({
+          title: `Bingo!`,
+          text: ` ${cart?.name} added to the cart.`,
+          imageUrl: `${cart?.img}`,
+          imageWidth: 400,
+          imageHeight: 200,
+          imageAlt: 'Custom image',
+        });
+        refetch();
+      }
+    });
+    // axiosSecure.post('/featureCards')
+    //   .then(res => {
+    //     console.log(res.data);
+    // })
+  };
 
   const handleDeleteUser = id => {
     Swal.fire({
@@ -78,7 +99,12 @@ const ProductReview = () => {
                     <br />
                   </td>
                   <td className="text-xl text-white">
-                    <FaPen></FaPen>
+                    <button
+                      onClick={() => handleMakeFeature(item)}
+                      className="btn btn-ghost text-xl"
+                    >
+                      <FaBookmark></FaBookmark>
+                    </button>
                   </td>
                   <th>
                     <button

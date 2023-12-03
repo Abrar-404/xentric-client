@@ -1,32 +1,24 @@
-import { useQuery } from '@tanstack/react-query';
-import useAxiosSecure from '../../Components/Hooks/useAxiosSecure';
+import { useEffect, useState } from "react";
 import CouponsCard from './CouponsCard';
 
 const CouponList = () => {
-  const axiosSecure = useAxiosSecure();
 
-  const { data: coupons = [] } = useQuery({
-    queryKey: ['coupons'],
-    queryFn: async () => {
-      const res = await axiosSecure.get('/coupons', {
-        headers: {
-          authorization: `Bearer ${localStorage.getItem('access-token')}`,
-        },
+  const [couponItem, setCouponItem] = useState([])
+
+  useEffect(() => {
+    fetch('http://localhost:5000/coupons')
+      .then(res => res.json())
+      .then(data => {
+        console.log(data);
+        setCouponItem(data);
       });
-      return res.data;
-    },
-  });
+  }, []);
 
   return (
     <div>
-      <h1>
-        {coupons?.map(itemCoupon => (
-          <CouponsCard
-            key={itemCoupon?._id}
-            itemCoupon={itemCoupon}
-          ></CouponsCard>
-        ))}
-      </h1>
+      {couponItem?.map(coup => (
+        <CouponsCard key={coup?._id} coupon={coup}></CouponsCard>
+      ))}
     </div>
   );
 };

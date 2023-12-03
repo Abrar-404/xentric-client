@@ -1,9 +1,9 @@
-const CouponsCard = ({ itemCoupon }) => {
-  console.log('Coupon:', itemCoupon);
-  const { name } = itemCoupon || {};
+const CouponsCard = ({ coup }) => {
+  const { name } = coup || {};
+
   return (
     <div>
-      <h1>{name}</h1>
+      <h1 className="text-3xl text-white">{name}</h1>
     </div>
   );
 };

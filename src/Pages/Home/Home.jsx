@@ -4,7 +4,6 @@ import Footer from '../Footer/Footer';
 import RelaxMain from '../Relax/RelaxMain';
 import '../../Components/Styles/texteffect.css';
 import CouponsCard from '../CouponList/CouponsCard';
-// import CarouselCard from '../../Components/Slider/CarouselCard';
 
 const Home = () => {
   return (
@@ -17,9 +16,7 @@ const Home = () => {
         <CardLoader></CardLoader>
       </div>
 
-      <div>
-        <CouponsCard></CouponsCard>
-      </div>
+      <CouponsCard></CouponsCard>
 
       <div className="text-center mt-48 mb-48">
         <h1 className="lg:text-6xl md:text-4xl text-3xl text-white font-vermin text-flicker-in-glow">

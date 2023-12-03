@@ -9,7 +9,7 @@ import { useState } from 'react';
 // eslint-disable-next-line react/prop-types
 const Cards = ({ feature }) => {
   const { user } = useContext(AuthContext);
-  const { img, name, _id, price, tag } = feature || {};
+  const { img, name, _id, price } = feature || {};
   const navigate = useNavigate();
   const [hasVoted, setHasVoted] = useState(false);
   const [voteCount, setVoteCount] = useState(0);
@@ -51,7 +51,6 @@ const Cards = ({ feature }) => {
             <Link to={`/featureCards/${_id}`}>
               <h3 className="glassBox__title">{name}</h3>
               <h3 className="mt-5 text-white">Price : {price}</h3>
-              <h3 className="mt-5 text-white">Tags: {tag}</h3>
             </Link>
           </div>
           <div className="mt-20 text-white">

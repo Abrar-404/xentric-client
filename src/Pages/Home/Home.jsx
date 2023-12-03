@@ -3,6 +3,8 @@ import CardLoader from '../FeatureCards/CardLoader';
 import Footer from '../Footer/Footer';
 import RelaxMain from '../Relax/RelaxMain';
 import '../../Components/Styles/texteffect.css';
+import CouponsCard from '../CouponList/CouponsCard';
+// import CarouselCard from '../../Components/Slider/CarouselCard';
 
 const Home = () => {
   return (
@@ -13,6 +15,10 @@ const Home = () => {
           Featured
         </h1>
         <CardLoader></CardLoader>
+      </div>
+
+      <div>
+        <CouponsCard></CouponsCard>
       </div>
 
       <div className="text-center mt-48 mb-48">

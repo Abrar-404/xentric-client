@@ -29,6 +29,7 @@ import ModeratorRoute from './ModeratorRoute/ModeratorRoute';
 import Payment from './Pages/Payment/Payment';
 import AddForm from './Pages/AllProduct/AddForm';
 import Statistics from './Pages/Admin/Statistics';
+import Coupons from './Pages/Admin/Coupons';
 
 const queryClient = new QueryClient();
 
@@ -137,6 +138,16 @@ const router = createBrowserRouter([
           <AdminRoute>
             <PrivateRoute>
               <Statistics></Statistics>,
+            </PrivateRoute>
+          </AdminRoute>
+        ),
+      },
+      {
+        path: '/coupons',
+        element: (
+          <AdminRoute>
+            <PrivateRoute>
+              <Coupons></Coupons>,
             </PrivateRoute>
           </AdminRoute>
         ),

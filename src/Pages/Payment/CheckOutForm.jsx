@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import useAxiosSecure from '../../Components/Hooks/useAxiosSecure';
 import useCarts from './../../Components/Hooks/useCarts';
 import useAuth from './../../Components/Hooks/useAuth';
-import MyProducts from './../MyProductsPage/MyProducts';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 

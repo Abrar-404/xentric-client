@@ -1,4 +1,5 @@
 const CouponsCard = ({ coup }) => {
+  // console.log(coup);
   const { name } = coup || {};
 
   return (

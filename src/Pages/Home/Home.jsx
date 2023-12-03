@@ -4,6 +4,7 @@ import Footer from '../Footer/Footer';
 import RelaxMain from '../Relax/RelaxMain';
 import '../../Components/Styles/texteffect.css';
 import CouponsCard from '../CouponList/CouponsCard';
+import CouponList from './../CouponList/CouponList';
 
 const Home = () => {
   return (
@@ -16,7 +17,7 @@ const Home = () => {
         <CardLoader></CardLoader>
       </div>
 
-      <CouponsCard></CouponsCard>
+      <CouponList></CouponList>
 
       <div className="text-center mt-48 mb-48">
         <h1 className="lg:text-6xl md:text-4xl text-3xl text-white font-vermin text-flicker-in-glow">

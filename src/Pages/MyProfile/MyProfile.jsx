@@ -39,7 +39,7 @@ const MyProfile = () => {
           <div className="card-body">
             <div className="flex lg:flex-row md:flex-row flex-col items-center">
               <img
-                src="https://i.ibb.co/tpykT7Z/dci1u96-bc9baa6c-f4ec-43ec-afff-1dec8af5c5d1.gif"
+                src="https://i.ibb.co/dWSgBgM/dci1u96-bc9baa6c-f4ec-43ec-afff-1dec8af5c5d1.gif"
                 alt=""
               />
               <div className="text-left">

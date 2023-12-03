@@ -1,6 +1,6 @@
 import { Link, useLoaderData } from 'react-router-dom';
 
-const AllProductDetails = () => {
+const AllItemDetails = () => {
   const allItem = useLoaderData();
   const { img, name, description, more, _id, tag } = allItem || {};
 
@@ -13,7 +13,7 @@ const AllProductDetails = () => {
               <div className=" relative">
                 <img
                   className=" w-[400px] h-[300px] rounded-full transition-transform duration-300 transform hover:scale-110 hover:rotate-12"
-                  src={img || allItem?.image}
+                  src={img}
                   alt="Shoes"
                 />
               </div>
@@ -43,4 +43,4 @@ const AllProductDetails = () => {
   );
 };
 
-export default AllProductDetails;
+export default AllItemDetails;

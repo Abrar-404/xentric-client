@@ -2,6 +2,7 @@ import { FaCheck, FaEye, FaPen, FaTrashAlt } from 'react-icons/fa';
 import useAxiosSecure from './../../Components/Hooks/useAxiosSecure';
 import Swal from 'sweetalert2';
 import useCarts from './../../Components/Hooks/useCarts';
+import { Link } from 'react-router-dom';
 
 const ProductReview = () => {
   const axiosSecure = useAxiosSecure();
@@ -71,7 +72,9 @@ const ProductReview = () => {
                     </div>
                   </td>
                   <td className="text-xl text-white">
-                    <FaEye></FaEye>
+                    <Link to={`/allProducts/${item?._id}`}>
+                      <FaEye></FaEye>
+                    </Link>
                     <br />
                   </td>
                   <td className="text-xl text-white">

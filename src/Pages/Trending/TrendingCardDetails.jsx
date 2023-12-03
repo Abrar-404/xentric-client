@@ -28,7 +28,9 @@ const TrendingCardDetails = () => {
               <div className="card-actions flex gap-5 justify-center">
                 <button className="btn button-85">Buy Now</button>
                 <button className="btn button-85">Upvote</button>
-                <button className="btn button-85">Report</button>
+                <Link to="/reported">
+                  <button className="btn button-85">Report</button>
+                </Link>
               </div>
               <div className="justify-center mt-10">
                 <Link to={`/postReviewForm/${_id}`}>

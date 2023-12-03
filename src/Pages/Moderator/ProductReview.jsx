@@ -14,19 +14,14 @@ const ProductReview = () => {
       if (res.data.insertedId) {
         Swal.fire({
           title: `Bingo!`,
-          text: ` ${cart?.name} added to the cart.`,
-          imageUrl: `${cart?.img}`,
+          text: ` ${item?.name} is now featured.`,
+          imageUrl: `${item?.img}`,
           imageWidth: 400,
           imageHeight: 200,
           imageAlt: 'Custom image',
         });
-        refetch();
       }
     });
-    // axiosSecure.post('/featureCards')
-    //   .then(res => {
-    //     console.log(res.data);
-    // })
   };
 
   const handleDeleteUser = id => {

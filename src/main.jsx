@@ -30,6 +30,7 @@ import Payment from './Pages/Payment/Payment';
 import AddForm from './Pages/AllProduct/AddForm';
 import Statistics from './Pages/Admin/Statistics';
 import Coupons from './Pages/Admin/Coupons';
+import Reported from './Pages/Moderator/Reported';
 
 const queryClient = new QueryClient();
 
@@ -128,6 +129,16 @@ const router = createBrowserRouter([
           <ModeratorRoute>
             <PrivateRoute>
               <ProductReview></ProductReview>,
+            </PrivateRoute>
+          </ModeratorRoute>
+        ),
+      },
+      {
+        path: '/reported',
+        element: (
+          <ModeratorRoute>
+            <PrivateRoute>
+              <Reported></Reported>,
             </PrivateRoute>
           </ModeratorRoute>
         ),

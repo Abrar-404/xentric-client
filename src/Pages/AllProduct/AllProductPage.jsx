@@ -7,7 +7,6 @@ const AllProductPage = ({ item }) => {
 
   return (
     <>
-
       <div>
         <div className="card card-compact shadow-xl">
           <figure>

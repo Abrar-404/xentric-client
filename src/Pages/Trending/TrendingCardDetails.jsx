@@ -2,7 +2,7 @@ import { Link, useLoaderData } from 'react-router-dom';
 
 const TrendingCardDetails = () => {
   const trendingDetails = useLoaderData();
-  const { img, name, description, more, _id } = trendingDetails || {};
+  const { img, name, description, more, _id, tag } = trendingDetails || {};
 
   return (
     <div>
@@ -21,6 +21,7 @@ const TrendingCardDetails = () => {
             <div className="card-body space-y-5 text-center">
               <h2 className="text-white text-3xl mt-2 font-script">{name}</h2>
               <p className="text-white">{description}</p>
+              <p className="text-white">Tags: {tag}</p>
               <p className="text-white">
                 <span className="font-vermin">More Here :</span> {more}
               </p>

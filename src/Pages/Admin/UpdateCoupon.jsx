@@ -13,20 +13,20 @@ const UpdateCoupon = () => {
   const handleAdd = e => {
     e.preventDefault();
     const form = e.target;
-    const name = form.name.value;
+    const code = form.code.value;
     const date = form.date.value;
-    const discount = form.discount.value;
+    const amount = form.amount.value;
     const description = form.description.value;
 
     const addProductItem = {
       email: user.email,
-      name,
+      code,
       date,
       description,
-      discount: parseFloat(discount),
+      discount: parseFloat(amount),
     };
 
-    axiosSecure.post('/coupons', addProductItem).then(res => {
+    axiosSecure.post('/allCoupon', addProductItem).then(res => {
       console.log(res.data);
       if (res.data.insertedId) {
         Swal.fire({
@@ -75,7 +75,7 @@ const UpdateCoupon = () => {
                       placeholder="Coupon code"
                       className="input input-bordered text-black"
                       required
-                      name="name"
+                      name="code"
                     />
                   </div>
 
@@ -117,7 +117,7 @@ const UpdateCoupon = () => {
                       placeholder="Discount Amount"
                       className="input input-bordered text-black"
                       required
-                      name="discount"
+                      name="amount"
                     />
                   </div>
 

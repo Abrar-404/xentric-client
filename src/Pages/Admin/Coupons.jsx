@@ -26,18 +26,6 @@ const Coupons = () => {
       discount: parseFloat(discount),
     };
 
-    // axiosSecure.post('/myProducts', addProductItem).then(res => {
-    //   console.log(res.data);
-    //   if (res.data.insertedId) {
-    //     Swal.fire({
-    //       title: `Bingo!`,
-    //       text: ` Product added to the cart.`,
-    //       icon: 'success',
-    //     });
-    //     Navigate('/myProducts');
-    //   }
-    // });
-
     axiosSecure.post('/coupons', addProductItem).then(res => {
       console.log(res.data);
       if (res.data.insertedId) {
@@ -84,7 +72,7 @@ const Coupons = () => {
                     </label>
                     <input
                       type="text"
-                      placeholder="Coupon Name"
+                      placeholder="Coupon code"
                       className="input input-bordered text-black"
                       required
                       name="name"
@@ -97,7 +85,7 @@ const Coupons = () => {
                     </label>
                     <input
                       type="text"
-                      placeholder="Coupon Name"
+                      placeholder="Expiry Date"
                       className="input input-bordered text-black"
                       required
                       name="date"

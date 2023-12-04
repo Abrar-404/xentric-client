@@ -1,6 +1,6 @@
 import { NavLink, Outlet } from 'react-router-dom';
 import { BiSolidCartAlt } from 'react-icons/bi';
-import { FaHome, FaUtensils } from 'react-icons/fa';
+import { FaHome, FaUser, FaUtensils } from 'react-icons/fa';
 import useCarts from '../../Components/Hooks/useCarts';
 import useAdmin from './../../Components/Hooks/useAdmin';
 import '../../Components/Styles/button.css';
@@ -88,17 +88,17 @@ const Dashboard = () => {
                 <li>
                   <NavLink to="/myProfile">
                     {' '}
-                    <FaHome></FaHome> My Profile
+                    <FaUser></FaUser> My Profile
                   </NavLink>
                 </li>
 
                 <li>
                   <NavLink to="/myProducts">
                     {' '}
-                    <BiSolidCartAlt></BiSolidCartAlt>My Cart : ({cart.length})
+                    <BiSolidCartAlt></BiSolidCartAlt>My Products : (
+                    {cart.length})
                   </NavLink>
                 </li>
-                
               </>
             )}
             <hr />

@@ -14,7 +14,7 @@ const TrendingCardDetails = () => {
                 <img
                   className=" w-[400px] h-[300px] rounded-full transition-transform duration-300 transform hover:scale-110 hover:rotate-12"
                   src={img}
-                  alt="Shoes"
+                  alt="image"
                 />
               </div>
             </figure>

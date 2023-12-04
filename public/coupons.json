@@ -22,5 +22,47 @@
     "date": "05/11/2023",
     "description": "use to get attractive discount",
     "amount": 60
+  },
+  {
+    "code": "BHAI200",
+    "date": "12/11/2023",
+    "description": "use to get attractive discount",
+    "amount": 60
+  },
+  {
+    "code": "JHAKKAS",
+    "date": "23/04/2023",
+    "description": "use to get attractive discount",
+    "amount": 60
+  },
+  {
+    "code": "COOL360",
+    "date": "15/10/2023",
+    "description": "use to get attractive discount",
+    "amount": 60
+  },
+  {
+    "code": "HATIM",
+    "date": "09/12/2023",
+    "description": "use to get attractive discount",
+    "amount": 60
+  },
+  {
+    "code": "INYAKI",
+    "date": "04/12/2023",
+    "description": "use to get attractive discount",
+    "amount": 60
+  },
+  {
+    "code": "XOSS200",
+    "date": "03/11/2023",
+    "description": "use to get attractive discount",
+    "amount": 60
+  },
+  {
+    "code": "600RTTR",
+    "date": "21/11/2023",
+    "description": "use to get attractive discount",
+    "amount": 60
   }
 ]

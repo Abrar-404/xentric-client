@@ -1,8 +1,8 @@
-import { Link, useLoaderData } from 'react-router-dom';
+import { useLoaderData } from 'react-router-dom';
 
 const CouponDetails = () => {
   const allItem = useLoaderData();
-  const { code, description, amount, date, _id } = allItem || {};
+  const { code, description, amount, date } = allItem || {};
 
   return (
     <div>
@@ -25,18 +25,18 @@ const CouponDetails = () => {
               <p className="text-white">Coupon Description : {description}</p>
               <p className="text-white">Discount Amount : {amount}</p>
               <p className="text-white">
-                <span className="font-vermin">:</span>Expiry Date : {date}
+                <span className="font-vermin"></span>Expiry Date : {date}
               </p>
               {/* <div className="card-actions flex gap-5 justify-center">
                 <button className="btn button-85">Buy Now</button>
                 <button className="btn button-85">Upvote</button>
                 <button className="btn button-85">Report</button>
               </div> */}
-              <div className="justify-center mt-10">
+              {/* <div className="justify-center mt-10">
                 <Link to={`/postReviewForm/${_id}`}>
                   <button className="btn w-[30%] button-85">Post Review</button>
                 </Link>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

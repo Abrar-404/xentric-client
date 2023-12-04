@@ -33,6 +33,7 @@ import Coupons from './Pages/Admin/Coupons';
 import Reported from './Pages/Moderator/Reported';
 import ReportForm from './Pages/ReportForm/ReportForm';
 import CouponDetails from './Pages/Admin/CouponDetails';
+import UpdateCoupon from './Pages/Admin/UpdateCoupon';
 
 const queryClient = new QueryClient();
 
@@ -253,6 +254,14 @@ const router = createBrowserRouter([
           fetch(
             `https://server-site-rho-silk.vercel.app/allCoupon/${params.id}`
           ),
+      },
+      {
+        path: '/updateCoupon/:id',
+        element: (
+          <PrivateRoute>
+            <UpdateCoupon></UpdateCoupon>
+          </PrivateRoute>
+        )
       },
       {
         path: '/addForm/:id',

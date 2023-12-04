@@ -225,9 +225,11 @@ const Coupons = () => {
             {itemCoup?.map(item => (
               <tr key={item?._id}>
                 <th className="">
-                  <button className="text-xl text-white btn btn-ghost">
-                    <FaPen></FaPen>
-                  </button>
+                  <Link to={`/updateCoupon/${item?._id}`}>
+                    <button className="text-xl text-white btn btn-ghost">
+                      <FaPen></FaPen>
+                    </button>
+                  </Link>
                 </th>
                 <td>
                   <div className="flex items-center gap-3">

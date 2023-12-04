@@ -31,6 +31,7 @@ import AddForm from './Pages/AllProduct/AddForm';
 import Statistics from './Pages/Admin/Statistics';
 import Coupons from './Pages/Admin/Coupons';
 import Reported from './Pages/Moderator/Reported';
+import ReportForm from './Pages/ReportForm/ReportForm';
 
 const queryClient = new QueryClient();
 
@@ -113,6 +114,18 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
+      {
+        path: '/reportItem',
+        element: (
+          <PrivateRoute>
+            <ReportForm></ReportForm>,
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(
+            `https://server-site-rho-silk.vercel.app/trendingCards/${params.id}`
+          ),
+      },
 
       // Admin, moderator and users related----------------------
       {
@@ -126,16 +139,6 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: '/productReview',
-        element: (
-          <ModeratorRoute>
-            <PrivateRoute>
-              <ProductReview></ProductReview>,
-            </PrivateRoute>
-          </ModeratorRoute>
-        ),
-      },
-      {
         path: '/reported',
         element: (
           <ModeratorRoute>
@@ -145,6 +148,17 @@ const router = createBrowserRouter([
           </ModeratorRoute>
         ),
       },
+      {
+        path: '/productReview',
+        element: (
+          <ModeratorRoute>
+            <PrivateRoute>
+              <ProductReview></ProductReview>,
+            </PrivateRoute>
+          </ModeratorRoute>
+        ),
+      },
+
       {
         path: '/statistics',
         element: (

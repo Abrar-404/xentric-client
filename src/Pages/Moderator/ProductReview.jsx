@@ -53,7 +53,7 @@ const ProductReview = () => {
 
   return (
     <div>
-      <dir>
+      <div>
         <div className="overflow-x-auto">
           <table className="table">
             {/* head */}
@@ -114,7 +114,7 @@ const ProductReview = () => {
             </tbody>
           </table>
         </div>
-      </dir>
+      </div>
     </div>
   );
 };

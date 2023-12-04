@@ -32,6 +32,7 @@ import Statistics from './Pages/Admin/Statistics';
 import Coupons from './Pages/Admin/Coupons';
 import Reported from './Pages/Moderator/Reported';
 import ReportForm from './Pages/ReportForm/ReportForm';
+import CouponDetails from './Pages/Admin/CouponDetails';
 
 const queryClient = new QueryClient();
 
@@ -240,6 +241,18 @@ const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(`https://server-site-rho-silk.vercel.app/allItem/${params.id}`),
+      },
+      {
+        path: '/allCoupon/:id',
+        element: (
+          <PrivateRoute>
+            <CouponDetails></CouponDetails>
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(
+            `https://server-site-rho-silk.vercel.app/allCoupon/${params.id}`
+          ),
       },
       {
         path: '/addForm/:id',

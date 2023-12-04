@@ -144,6 +144,7 @@
 import { useEffect, useState } from 'react';
 import { FaEye, FaPen, FaPlus } from 'react-icons/fa';
 import { FaTrashAlt } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import useCarts from '../../Components/Hooks/useCarts';
 import useAxiosSecure from './../../Components/Hooks/useAxiosSecure';
@@ -249,9 +250,11 @@ const Coupons = () => {
                   <h1 className="text-white font-bold">{item?.amount}</h1>
                 </th>
                 <th>
-                  <button className="btn btn-ghost btn-xs text-white text-xl">
-                    <FaEye></FaEye>
-                  </button>
+                  <Link to={`/allCoupon/${item?._id}`}>
+                    <button className="btn btn-ghost btn-xs text-white text-xl">
+                      <FaEye></FaEye>
+                    </button>
+                  </Link>
                 </th>
                 <th>
                   <button

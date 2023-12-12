@@ -6,8 +6,13 @@
 [Client-side Link](https://github.com/Abrar-404/xentric-client) <br>
 [Server-side Link](https://github.com/Abrar-404/xentric-server) <br>
 
+# Unique Features
+- It has a section for relaxation of users/customers. If they get bored or they are tired of their scrolling, the can come to this section and relax for a moment with the "Framer Motion" animation
+- It has a framer motion animation on the banner which provides visual entertainment and make the banner more interesting
+- There is a "Diff" in the users profile secion in which there shows the name of the users which makes the UI more attractive and make the users feel special in this website
+- There is also a pie chart in the user profile from where they can see how much products they ordered/owned
 
-# Features of this project
+# Other Features of this project
 - This is a dynamic project where there is a navbar which contains 5 routes <br> <br>
 - The cards which are shown in this project is dynamic which is related to MongoDB. It means the data/cards are coming from MongoDB database. <br> <br>
 - There is a route named Products where there are shown all the products available in cards format and these cards are dynamic <br> <br>

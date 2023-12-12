@@ -6,6 +6,13 @@
 [Client-side Link](https://github.com/Abrar-404/xentric-client) <br>
 [Server-side Link](https://github.com/Abrar-404/xentric-server) <br>
 
+# Unique Technologies
+- Framer Motion
+- Animista
+- animeJS
+- react spinner
+- google rechart
+
 # Unique Features
 - It has a section for relaxation of users/customers. If they get bored or they are tired of their scrolling, the can come to this section and relax for a moment with the "Framer Motion" animation <br> <br>
 - It has a framer motion animation on the banner which provides visual entertainment and make the banner more interesting <br> <br>

@@ -43,7 +43,7 @@ const Cards = ({ feature }) => {
 
   return (
     <div>
-      <div data-aos="zoom-in-right" className="card shadow-xl">
+      {/* <div data-aos="zoom-in-right" className="card shadow-xl">
         <div className="glassBox">
           <div className="glassBox__imgBox">
             <img className="rounded-full" src={img} alt="" />
@@ -58,6 +58,22 @@ const Cards = ({ feature }) => {
               Upvote
             </button>
             <span className="ml-2">{voteCount} votes</span>
+          </div>
+        </div>
+      </div> */}
+
+      <div>
+        <div data-aos="zoom-in-right" class="cardush shadow-xl">
+          <img className="h-[200px]" src={img} alt="" />
+          <div class="cardush__content">
+            <Link to={`/featureCards/${_id}`}>
+              <p class="cardush__title">{name}</p>
+            </Link>
+            <p class="cardush__description">Price : ${price}</p>
+
+            <button onClick={handleVote} class="bittushh mt-5">
+              Upvote
+            </button>
           </div>
         </div>
       </div>

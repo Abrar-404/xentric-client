@@ -1,34 +1,12 @@
-/*
- * Mixin: Flex Center
- */
+/* 
 @mixin flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/*
- * Preparing stage
- */
 html,
-/* body {
-  padding: 0;
-  margin: 0;
-  height: 100%;
-} */
 
-/* body {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #0093e9;
-  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
-} */
-
-/*
- * Start
- */
 .glassBox,
 .glassBox * {
   box-sizing: border-box;
@@ -42,7 +20,6 @@ html,
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(2px);
-  /* border: 1px solid rgba(255, 255, 255, 0.2); */
   border-right-color: rgba(255, 255, 255, 0.1);
   border-bottom-color: rgba(255, 255, 255, 0.1);
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
@@ -91,5 +68,66 @@ html,
 }
 
 .glassBox:hover .glassBox__title {
-  /* margin-top: 40px; */
+} */
+
+.cardush {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.cardush svg {
+  width: 48px;
+  fill: #333;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.cardush:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cardush__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.cardush:hover .cardush__content {
+  transform: translate(-50%, -50%) rotate(0deg);
+  opacity: 1;
+}
+
+.cardush__title {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+}
+
+.cardush__description {
+  margin: 10px 0 0;
+  font-size: 16px;
+  color: black;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.cardush:hover svg {
+  scale: 0;
+  transform: rotate(-45deg);
 }

@@ -34,6 +34,7 @@ import Reported from './Pages/Moderator/Reported';
 import ReportForm from './Pages/ReportForm/ReportForm';
 import CouponDetails from './Pages/Admin/CouponDetails';
 import UpdateCoupon from './Pages/Admin/UpdateCoupon';
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 const queryClient = new QueryClient();
 
@@ -284,11 +285,17 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <QueryClientProvider client={queryClient}>
-      <AuthProvider>
+  <QueryClientProvider client={queryClient}>
+    <AuthProvider>
+      <ParallaxProvider
+        init={{
+          smoothScrollingDuration: 500,
+          smoothScrolling: true,
+          forceHeight: false,
+        }}
+      >
         <RouterProvider router={router} />
-      </AuthProvider>
-    </QueryClientProvider>
-  </React.StrictMode>
+      </ParallaxProvider>
+    </AuthProvider>
+  </QueryClientProvider>
 );

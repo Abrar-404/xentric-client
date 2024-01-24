@@ -24,7 +24,7 @@ const Navbar = () => {
   const navLinks = (
     <>
       <li className="">
-        <button className="text-white button-85 btn-sm mr-1 mb-2 text-center">
+        <button className="text-white bittushh btn-sm mr-1 mb-2 text-center">
           <NavLink to="/">Home</NavLink>
         </button>
       </li>
@@ -32,23 +32,23 @@ const Navbar = () => {
       {user ? null : (
         <>
           <li className="">
-            <button className="text-white button-85 btn-sm mr-2 mb-2 text-center">
+            <button className="text-white bittushh btn-sm mr-2 mb-2 text-center">
               <NavLink to="/addProducts">Add Products</NavLink>
             </button>
           </li>
 
           <li className="">
-            <button className="text-white button-85 btn-sm mr-2 mb-2 text-center">
+            <button className="text-white bittushh btn-sm mr-2 mb-2 text-center">
               <NavLink to="/allItem">Products</NavLink>
             </button>
           </li>
           <li className="">
-            <button className="text-white button-85 btn-sm mr-2 mb-2 text-center">
+            <button className="text-white bittushh btn-sm mr-2 mb-2 text-center">
               <NavLink to="/trending">Trending</NavLink>
             </button>
           </li>
           <li className="">
-            <button className="text-white button-85 btn-sm mr-2 mb-2 text-center">
+            <button className="text-white bittushh btn-sm mr-2 mb-2 text-center">
               <NavLink to="/myProducts">
                 <div className="flex items-center gap-2">
                   <FaOpencart></FaOpencart>+{cart?.length}
@@ -62,22 +62,22 @@ const Navbar = () => {
       {user && (
         <>
           <li className="">
-            <button className="text-white button-85 btn-sm mr-2 mb-2 text-center">
+            <button className="text-white bittushh btn-sm mr-2 mb-2 text-center">
               <NavLink to="/allItem">Products</NavLink>
             </button>
           </li>
           <li className="">
-            <button className="text-white button-85 btn-sm mr-2 mb-2 text-center">
+            <button className="text-white bittushh btn-sm mr-2 mb-2 text-center">
               <NavLink to="/trending">Trending</NavLink>
             </button>
           </li>
           <li className="">
-            <button className="text-white button-85 btn-sm mr-2 mb-2 text-center">
+            <button className="text-white bittushh btn-sm mr-2 mb-2 text-center">
               <NavLink to="/addProducts">Add Products</NavLink>
             </button>
           </li>
           <li className="">
-            <button className="text-white button-85 btn-sm mr-2 mb-2 text-center">
+            <button className="text-white bittushh btn-sm mr-2 mb-2 text-center">
               <NavLink to="/myProducts">
                 <div className="flex items-center gap-2">
                   <FaOpencart></FaOpencart>+{cart?.length}
@@ -126,7 +126,7 @@ const Navbar = () => {
             />
           </Link>
         </div>
-        <div className="navbar-end hidden lg:flex">
+        <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navLinks}</ul>
         </div>
         <div className="navbar-end">
@@ -151,14 +151,14 @@ const Navbar = () => {
                 </li>
                 <Link to="/dashboard">
                   <li>
-                    <button className="btn btn-sm mb-2 button-85">
+                    <button className="btn btn-sm mb-2 bittushh">
                       Dashboard
                     </button>
                   </li>
                 </Link>
                 <li>
                   <button
-                    className="btn btn-sm button-85"
+                    className="btn btn-sm bittushh"
                     onClick={handleLogOut}
                   >
                     Log Out
@@ -170,7 +170,7 @@ const Navbar = () => {
             <Link to="/login">
               <button
                 role="button"
-                className="button-85 border-none text-xs text-white"
+                className="bittushh border-none text-xs text-white"
               >
                 Login
               </button>

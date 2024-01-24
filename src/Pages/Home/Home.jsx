@@ -4,6 +4,7 @@ import Footer from '../Footer/Footer';
 import RelaxMain from '../Relax/RelaxMain';
 import '../../Components/Styles/texteffect.css';
 import CouponList from './../CouponList/CouponList';
+import BannerParallax from './../../Components/ParallaxBanner/BannerParallax';
 
 const Home = () => {
   return (
@@ -14,6 +15,10 @@ const Home = () => {
           Featured
         </h1>
         <CardLoader></CardLoader>
+      </div>
+
+      <div>
+        <BannerParallax></BannerParallax>
       </div>
 
       <CouponList></CouponList>

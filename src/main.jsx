@@ -287,13 +287,7 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <QueryClientProvider client={queryClient}>
     <AuthProvider>
-      <ParallaxProvider
-        init={{
-          smoothScrollingDuration: 500,
-          smoothScrolling: true,
-          forceHeight: false,
-        }}
-      >
+      <ParallaxProvider>
         <RouterProvider router={router} />
       </ParallaxProvider>
     </AuthProvider>

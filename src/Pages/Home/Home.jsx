@@ -17,7 +17,7 @@ const Home = () => {
         <CardLoader></CardLoader>
       </div>
 
-      <div>
+      <div className='mt-48'>
         <BannerParallax></BannerParallax>
       </div>
 

@@ -3,7 +3,7 @@ import Navbar from './../../Pages/Navbar/Navbar';
 
 const MainLayout = () => {
   const background = {
-    backgroundImage: `url(https://i.ibb.co/Hny4hgt/45473.jpg)`,
+    backgroundImage: `url(https://i.ibb.co/2KwLR4L/Back.jpg)`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundAttachment: 'fixed',

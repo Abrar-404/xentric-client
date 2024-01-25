@@ -1,8 +1,6 @@
 // import React from 'react';
 // import { ParallaxProvider, Parallax } from 'react-skrollr';
 
-import { ParallaxBanner } from 'react-scroll-parallax';
-
 // const BannerParallax = () => {
 //   const data = {
 //     'data-top-top': 'transform: translateX(100%);',
@@ -84,28 +82,40 @@ import { ParallaxBanner } from 'react-scroll-parallax';
 
 // export default BannerParallax;
 
+import { Parallax } from 'react-scroll-parallax';
+import gear from '../../assets/gear.gif';
+import '../Styles/geartext.css';
+
 const BannerParallax = () => {
   return (
-    <div>
-      <ParallaxBanner
-        layers={[
-          { image: 'https://i.ibb.co/hLjMTnV/pngwing-com.png', speed: -20 },
-          {
-            speed: -15,
-            children: (
-              <div className="absolute inset-0 flex items-center justify-center">
-                <h1 className="text-8xl text-white font-thin">Hello World!</h1>
-              </div>
-            ),
-          },
-          {
-            image:
-              'https://i.ibb.co/TBf4yYp/Pngtree-cardboard-open-box-packaging-mockup-8812605.png',
-            speed: -10,
-          },
-        ]}
-        className="aspect-[2/1]"
-      />
+    <div className="">
+      <div className="flex justify-between md:flex-row flex-row items-center lg:flex-row">
+        <Parallax speed={-10}>
+          <img
+            className="md:w-[200px] md:h-[400px] lg:w-[300px] lg:h-[600px] w-[150px] h-[300px]"
+            src={gear}
+            alt=""
+          />
+        </Parallax>
+
+        <Parallax speed={50}>
+          <div className="lg:mr-96 md:mr-48 mr-12 mx-auto">
+            <img
+              data-aos="fade-left"
+              className="md:w-[250px] md:h-[80px] lg:w-[250px] lg:h-[80px] w-[200px] h-[60px] lg:mr-20 md:mr-8 mr-12 mx-auto"
+              src="https://i.ibb.co/1YCvN7J/logo.png"
+              alt=""
+            />
+            <h1
+              data-aos="fade-left"
+              className="text-center mt-12 lg:text-4xl text-xl text-white font-bold font-script focus-in-expand"
+            >
+              Unleash Your Desires <br /> And grab your <br /> gadgets with the{' '}
+              <br /> best quality
+            </h1>
+          </div>
+        </Parallax>
+      </div>
     </div>
   );
 };

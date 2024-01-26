@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import Navbar from './../../Pages/Navbar/Navbar';
-// import '../Styles/webanimation.css';
+import '../Styles/webanimation.css';
 
 const MainLayout = () => {
   const background = {
@@ -11,6 +11,18 @@ const MainLayout = () => {
   };
   return (
     <div style={background} className="">
+      <ul className="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
       <div className="md:max-w-[768px] max-w-[428px] lg:max-w-[1400px] mx-auto ">
         <Navbar></Navbar>
         <Outlet></Outlet>

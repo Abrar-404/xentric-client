@@ -2,11 +2,13 @@ import img from '../../assets/banner.png';
 import Motion from '../../Components/Animation/Motion';
 import '../../Components/Styles/animista.css';
 import '../../Components/Styles/texteffect.css';
+import '../../Components/Styles/webanimation.css';
 
 const Banner = () => {
   return (
     <div>
       <div className="flex md:flex-row lg:flex-row flex-col items-center justify-evenly">
+     
         <img
           className="w-[250px] h-[200px] md:w-[300px] md:h-[200px] lg:w-[600px] lg:h-[400px] slide-in-elliptic-top-fwd "
           src={img}

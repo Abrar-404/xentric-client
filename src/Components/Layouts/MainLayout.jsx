@@ -23,20 +23,18 @@ const MainLayout = () => {
         key={location.pathname}
       >
         <AnimatedCursor
-          innerSize={8}
-          outerSize={35}
+          innerSize={10}
+          outerSize={60}
           innerScale={1}
           outerScale={2}
           outerAlpha={0}
+          trailingSpeed={4}
           hasBlendMode={true}
           innerStyle={{
-            backgroundColor: 'var(--cursor-color)',
             backgroundColor: 'white',
           }}
           outerStyle={{
-            border: '3px solid var(--cursor-color)',
-            // borderRadius: '3px solid',
-            // color: 'white',
+            border: '3px solid white',
           }}
         />
         <ul className="circles">

@@ -19,13 +19,15 @@ const CouponList = () => {
   });
 
   return (
-    <div className="mt-48">
-      <h1 className="text-6xl text-flicker-in-glow font-vermin text-white text-center">
+    <div>
+      <h1 className="text-6xl text-flicker-in-glow font-vermin text-white text-center ">
         Coupons
       </h1>
-      {coupons?.map(coup => (
-        <CouponsCard key={coup?._id} coup={coup}></CouponsCard>
-      ))}
+      <div className="mt-48 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mx-auto">
+        {coupons?.map(coup => (
+          <CouponsCard key={coup?._id} coup={coup}></CouponsCard>
+        ))}
+      </div>
     </div>
   );
 };

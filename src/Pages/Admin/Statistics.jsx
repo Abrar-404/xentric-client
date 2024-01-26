@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { PieChartAdmin } from './PieChartAdmin';
 import useCarts from './../../Components/Hooks/useCarts';
 import axios from 'axios'; // Import Axios for making HTTP requests
+import Transition from '../../Components/Transitions/Transition';
 
 const Statistics = () => {
   const [cart] = useCarts();
@@ -34,4 +35,4 @@ const Statistics = () => {
   );
 };
 
-export default Statistics;
+export default Transition(Statistics);

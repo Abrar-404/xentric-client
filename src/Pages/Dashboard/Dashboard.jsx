@@ -8,13 +8,12 @@ import { useContext } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
 import useModerator from './../../Components/Hooks/useModerator';
 import { PieChart } from '../../Components/PieChart.jsx/PieChart';
+import Transition from '../../Components/Transitions/Transition';
 
 const Dashboard = () => {
   const [cart] = useCarts();
   const [isAdmin] = useAdmin();
   const [isModerator] = useModerator();
-  console.log(isAdmin);
-  console.log(isModerator);
   const { user } = useContext(AuthContext);
 
   const productData = cart.map(item => ({
@@ -115,4 +114,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default Transition(Dashboard);

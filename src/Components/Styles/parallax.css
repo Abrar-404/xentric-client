@@ -14,7 +14,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #262626;
+  /* background: #262626; */
   min-height: 100vh;
   overflow: hidden;
 }
@@ -145,7 +145,7 @@
 
 .swiper-slide:nth-child(1n) {
   background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-    url(https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/2929f534-3bc3-4cbd-b84c-80df863d5a38)
+    url('https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/2929f534-3bc3-4cbd-b84c-80df863d5a38')
       no-repeat 50% 50% / cover;
 }
 

@@ -1,0 +1,30 @@
+.web {
+  /* position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px; */
+  background-color: #ff3cac;
+  background-image: linear-gradient(
+    225deg,
+    #ff3cac 0%,
+    #784ba0 50%,
+    #2b86c5 100%
+  );
+  animation: animate 25s linear infinite;
+  bottom: -150px;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}

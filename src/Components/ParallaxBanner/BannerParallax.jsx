@@ -76,44 +76,19 @@ const BannerParallax = () => {
       <AnimatedCursor
         innerSize={8}
         outerSize={35}
-        color="193, 11, 111"
+        innerScale={1}
+        outerScale={2}
         outerAlpha={0}
         hasBlendMode={true}
         innerStyle={{
-          // backgroundColor: 'var(--cursor-color)',
+          backgroundColor: 'var(--cursor-color)',
           backgroundColor: 'white',
         }}
         outerStyle={{
-          border: '3px solid var(--cursor-color)',
-          // color: 'white',
-          // border: '3px',
+          // border: '3px solid var(--cursor-color)',
+          borderRadius: '3px solid',
+          color: 'white',
         }}
-        innerScale={1}
-        outerScale={2}
-        clickables={[
-          'a',
-          'input[type="text"]',
-          'input[type="email"]',
-          'input[type="number"]',
-          'input[type="submit"]',
-          'input[type="image"]',
-          'label[for]',
-          'select',
-          'textarea',
-          'button',
-          '.link',
-          {
-            target: '.custom',
-            options: {
-              innerSize: 12,
-              outerSize: 12,
-              color: '255, 255, 255',
-              outerAlpha: 0.3,
-              innerScale: 0.7,
-              outerScale: 5,
-            },
-          },
-        ]}
       />
       <section className="section">
         <div class="content">

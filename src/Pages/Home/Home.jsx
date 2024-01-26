@@ -6,6 +6,7 @@ import '../../Components/Styles/texteffect.css';
 import CouponList from './../CouponList/CouponList';
 import BannerParallax from './../../Components/ParallaxBanner/BannerParallax';
 
+
 const Home = () => {
   return (
     <div className="mt-48">
@@ -20,6 +21,7 @@ const Home = () => {
       <div className="mt-48">
         <BannerParallax></BannerParallax>
       </div>
+
 
       <CouponList></CouponList>
 

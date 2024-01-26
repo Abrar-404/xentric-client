@@ -41,6 +41,6 @@ circle {
   height: 150px;
   border-radius: 50%;
   /* background: var(--accent); */
-  background: linear-gradient(to bottom right, blue, rgb(236, 86, 216));
+  background: linear-gradient(to bottom right, red, yellow);
   /* background: red; */
 }

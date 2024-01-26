@@ -5,6 +5,7 @@ import RelaxMain from '../Relax/RelaxMain';
 import '../../Components/Styles/texteffect.css';
 import CouponList from './../CouponList/CouponList';
 import BannerParallax from './../../Components/ParallaxBanner/BannerParallax';
+import Transition from '../../Components/Transitions/Transition';
 
 
 const Home = () => {
@@ -22,7 +23,6 @@ const Home = () => {
         <BannerParallax></BannerParallax>
       </div>
 
-
       <CouponList></CouponList>
 
       <div className="text-center mt-48 mb-48">
@@ -36,4 +36,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Transition(Home);

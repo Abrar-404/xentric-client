@@ -6,6 +6,7 @@ import useAxiosSecure from '../../Components/Hooks/useAxiosSecure';
 import { AuthContext } from '../../Providers/AuthProvider';
 import TagsInput from 'react-tagsinput';
 import 'react-tagsinput/react-tagsinput.css';
+import Transition from '../../Components/Transitions/Transition';
 
 const AddProductsPage = () => {
   const { user } = useContext(AuthContext);
@@ -158,4 +159,4 @@ const AddProductsPage = () => {
   );
 };
 
-export default AddProductsPage;
+export default Transition(AddProductsPage);

@@ -3,6 +3,7 @@ import { FaTrashAlt, FaEdit } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 import useAxiosSecure from '../../Components/Hooks/useAxiosSecure';
 import { Link } from 'react-router-dom';
+import Transition from '../../Components/Transitions/Transition';
 
 const MyProducts = () => {
   const [cart, refetch] = useCarts();
@@ -38,20 +39,22 @@ const MyProducts = () => {
 
   return (
     <div>
-      <div className="flex flex-col lg:flex-row md:flex-col mx-auto justify-evenly mb-20 mt-20 gap-5">
+      <div className="flex flex-col lg:flex-row md:flex-col mx-auto justify-evenly mb-20 mt-20 gap-5 overflow-x-auto z-50 sticky">
         <h1 className="lg:text-3xl md:text-3xl text-xl text-white">
           Items : {cart?.length}
         </h1>
         <h1 className="lg:text-3xl md:text-3xl text-xl text-white">
           Total Price : ${totalPrice}
         </h1>
-        <div>
+        <div className="overflow-x-auto">
           {cart?.length ? (
             <Link to="/payment">
               <button className="btn btn-secondary">Pay Now</button>
             </Link>
           ) : (
-            <button disabled className="btn btn-secondary">Pay Now</button>
+            <button disabled className="btn btn-secondary">
+              Pay Now
+            </button>
           )}
         </div>
       </div>
@@ -131,4 +134,4 @@ const MyProducts = () => {
   );
 };
 
-export default MyProducts;
+export default Transition(MyProducts);

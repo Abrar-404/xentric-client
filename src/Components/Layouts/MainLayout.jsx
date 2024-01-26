@@ -53,8 +53,8 @@ const MainLayout = () => {
         </ul>
         <div className="md:max-w-[768px] max-w-[428px] lg:max-w-[1400px] mx-auto ">
           <Navbar></Navbar>
-          <Outlet></Outlet>
           <Spring key={count}></Spring>
+          <Outlet></Outlet>
         </div>
       </div>
     </>

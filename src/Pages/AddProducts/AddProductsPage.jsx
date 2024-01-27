@@ -8,6 +8,7 @@ import TagsInput from 'react-tagsinput';
 import 'react-tagsinput/react-tagsinput.css';
 import Transition from '../../Components/Transitions/Transition';
 
+
 const AddProductsPage = () => {
   const { user } = useContext(AuthContext);
   const axiosSecure = useAxiosSecure();

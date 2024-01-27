@@ -2,7 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import { FaTrashAlt, FaUsers } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 import useAxiosSecure from '../../Components/Hooks/useAxiosSecure';
-import Transition from '../../Components/Transitions/Transition';
+import Transition from './../../Components/Transitions/Transition';
 const AllUsers = () => {
   const axiosSecure = useAxiosSecure();
 

@@ -24,7 +24,7 @@ const MainLayout = () => {
       >
         <AnimatedCursor
           innerSize={10}
-          outerSize={60}
+          outerSize={50}
           innerScale={1}
           outerScale={2}
           outerAlpha={0}

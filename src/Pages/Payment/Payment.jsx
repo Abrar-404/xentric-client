@@ -4,6 +4,7 @@ import CheckOutForm from './CheckOutForm';
 import '../../Components/Styles/payment.css';
 
 const stripePromise = loadStripe(import.meta.env.VITE_PAYMENT_GATEWAY_PK);
+import Transition from './../../Components/Transitions/Transition';
 
 const Payment = () => {
   return (
@@ -15,4 +16,4 @@ const Payment = () => {
   );
 };
 
-export default Payment;
+export default Transition(Payment);

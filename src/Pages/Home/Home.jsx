@@ -7,10 +7,7 @@ import CouponList from './../CouponList/CouponList';
 import BannerParallax from './../../Components/ParallaxBanner/BannerParallax';
 import Transition from '../../Components/Transitions/Transition';
 
-
 const Home = () => {
-
-
   return (
     <div className="mt-48">
       <Banner></Banner>

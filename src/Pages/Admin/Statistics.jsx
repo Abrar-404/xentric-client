@@ -4,6 +4,7 @@ import useCarts from './../../Components/Hooks/useCarts';
 import axios from 'axios'; // Import Axios for making HTTP requests
 import Transition from '../../Components/Transitions/Transition';
 
+
 const Statistics = () => {
   const [cart] = useCarts();
   const [userData, setUserData] = useState([]); // State to store user data

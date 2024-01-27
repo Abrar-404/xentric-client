@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider';
+import Transition from './../../Components/Transitions/Transition';
 
 const MyProfile = () => {
   const { user } = useContext(AuthContext);
@@ -61,4 +62,4 @@ const MyProfile = () => {
   );
 };
 
-export default MyProfile;
+export default Transition(MyProfile);

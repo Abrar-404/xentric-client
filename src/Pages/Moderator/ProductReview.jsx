@@ -3,6 +3,7 @@ import useAxiosSecure from './../../Components/Hooks/useAxiosSecure';
 import Swal from 'sweetalert2';
 import useCarts from './../../Components/Hooks/useCarts';
 import { Link } from 'react-router-dom';
+import Transition from './../../Components/Transitions/Transition';
 
 const ProductReview = () => {
   const axiosSecure = useAxiosSecure();
@@ -119,4 +120,4 @@ const ProductReview = () => {
   );
 };
 
-export default ProductReview;
+export default Transition(ProductReview);

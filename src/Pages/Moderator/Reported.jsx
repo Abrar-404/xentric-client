@@ -1,9 +1,6 @@
+import Transition from './../../Components/Transitions/Transition';
 const Reported = () => {
-  return (
-    <div>
-      
-    </div>
-  );
+  return <div></div>;
 };
 
-export default Reported;
+export default Transition(Reported);

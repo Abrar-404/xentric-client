@@ -4,8 +4,8 @@ import { FaTrashAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import useCarts from '../../Components/Hooks/useCarts';
-import Transition from '../../Components/Transitions/Transition';
 import useAxiosSecure from './../../Components/Hooks/useAxiosSecure';
+import Transition from './../../Components/Transitions/Transition';
 const Coupons = () => {
   const [itemCoup, setItemCoup] = useState([]);
   const [, refetch] = useCarts();
@@ -20,7 +20,7 @@ const Coupons = () => {
   }, []);
 
   const handleMakeFeature = item => {
-    axiosSecure.post('/allCoupon', item).then(res => {
+    axiosSecure.post('/coupons', item).then(res => {
       console.log(res.data);
       if (res.data.insertedId) {
         Swal.fire({

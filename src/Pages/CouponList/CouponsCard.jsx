@@ -124,7 +124,7 @@ const CouponsCard = ({ coup }) => {
           <span className="font-azonix text-white font-bold md:text-sm lg:text-sm">
             Description :{' '}
           </span>
-          <span className="textH md:text-sm text-sm font-extrabold font-azonix pl-5 lg:text-sm text-red-600">
+          <span className="textH md:text-xs text-xs font-extrabold font-azonix pl-5 lg:text-xs text-red-600">
             {' '}
             {description}
           </span>

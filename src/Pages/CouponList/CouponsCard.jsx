@@ -112,7 +112,7 @@ const CouponsCard = ({ coup }) => {
           </span>
         </div>
         <div>
-          <span className="font-azonix text-white font-bold md:text-sm lg:text-sm">
+          <span className="font-azonix text-sm text-white font-bold md:text-sm lg:text-sm">
             Expiry Date :{' '}
           </span>
           <span className="textH md:text-sm text-sm font-extrabold font-azonix pl-5 lg:text-sm text-red-600">

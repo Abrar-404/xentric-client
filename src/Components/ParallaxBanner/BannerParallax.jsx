@@ -42,7 +42,7 @@ const BannerParallax = () => {
               believe in quality. <br />
             </p>
             <img
-              className="w-[400px] h-[150px]"
+              className="lg:w-[400px] lg:h-[150px] md:w-[400px] md:h-[150px] w-[200px] h-[60px]"
               src="https://i.ibb.co/1YCvN7J/logo.png"
               alt=""
             />

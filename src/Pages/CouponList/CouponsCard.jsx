@@ -101,9 +101,44 @@ const CouponsCard = ({ coup }) => {
 
   return (
     <div className="">
-      <div class="book flex">
-        <span className="text-red-600">Coupn Name</span>
-        <h1 className="textH">{name}</h1>
+      <div class="book flex flex-col">
+        <div>
+          <span className="font-azonix text-white font-bold md:text-sm lg:text-sm">
+            Coupon Name :{' '}
+          </span>
+          <span className="textH md:text-sm text-sm font-extrabold font-azonix pl-5 lg:text-sm text-red-600">
+            {' '}
+            {name}
+          </span>
+        </div>
+        <div>
+          <span className="font-azonix text-white font-bold md:text-sm lg:text-sm">
+            Expiry Date :{' '}
+          </span>
+          <span className="textH md:text-sm text-sm font-extrabold font-azonix pl-5 lg:text-sm text-red-600">
+            {' '}
+            {date}
+          </span>
+        </div>
+        <div>
+          <span className="font-azonix text-white font-bold md:text-sm lg:text-sm">
+            Description :{' '}
+          </span>
+          <span className="textH md:text-sm text-sm font-extrabold font-azonix pl-5 lg:text-sm text-red-600">
+            {' '}
+            {description}
+          </span>
+        </div>
+        <div>
+          <span className="font-azonix text-white font-bold md:text-sm lg:text-sm">
+            Discount Rate :{' '}
+          </span>
+          <span className="textH md:text-sm text-sm font-extrabold font-azonix pl-5 lg:text-sm text-red-600">
+            {' '}
+            {discount}
+          </span>
+        </div>
+
         <div class="coverCard">
           <img
             className=""

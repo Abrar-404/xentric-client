@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react';
 import '../../Components/Styles/newsform.css';
 import '../../Components/Styles/socials.css';
+import { FaLongArrowAltDown } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
 import Swal from 'sweetalert2';
 
@@ -47,7 +48,7 @@ const Contact = () => {
     <div id="contact">
       <div>
         <h1 className="text-white text-center md:text-4xl text-3xl lg:text-6xl mt-96 font-bold mb-32">
-          Contact Me
+          Contact Us
         </h1>
       </div>
       <div className="flex items-center md:flex-col lg:flex-row flex-col justify-center gap-20">

@@ -26,6 +26,7 @@ const Contact = () => {
           Swal.fire({
             position: 'center',
             icon: 'success',
+            color: 'white',
             title: 'Message Sent Successfully',
             showConfirmButton: false,
             background: '#2B3445',

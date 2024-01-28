@@ -7,6 +7,7 @@ import CouponList from './../CouponList/CouponList';
 import BannerParallax from './../../Components/ParallaxBanner/BannerParallax';
 import Transition from '../../Components/Transitions/Transition';
 import Newsletter from '../../Components/Newsletter/Newsletter';
+import DriveHome from '../../Animation/DriveHome';
 
 const Home = () => {
   return (
@@ -27,6 +28,7 @@ const Home = () => {
 
       <CouponList></CouponList>
 
+      <DriveHome></DriveHome>
       <div className="text-center mt-72">
         <h1 className="lg:text-6xl md:text-4xl text-3xl text-white font-vermin text-flicker-in-glow">
           Get in touch with us

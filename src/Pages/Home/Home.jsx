@@ -25,7 +25,7 @@ const Home = () => {
 
       <CouponList></CouponList>
 
-      <div className="text-center mt-48">
+      <div className="text-center mt-72">
         <h1 className="lg:text-6xl md:text-4xl text-3xl text-white font-vermin text-flicker-in-glow">
           Get in touch with us
         </h1>

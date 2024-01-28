@@ -47,19 +47,25 @@ const Contact = () => {
 
   return (
     <div id="contact">
-      <div>
+      <div className="">
         <h1 className="text-white text-center md:text-4xl text-3xl lg:text-6xl mt-96 font-bold mb-32">
-          Contact Us
+          Get in touch with us
         </h1>
       </div>
       <div className="flex items-center md:flex-col lg:flex-row flex-col justify-center gap-20">
         <div>
           <h1 className="text-2xl text-white font-medium text-center mb-5">
-            Hover
+            Contact Us
           </h1>
           <div className="carded">
             <div className="background"></div>
-            <div className="logoed">Socials</div>
+            <div className="logoed">
+              Socials <br />
+              <span className="mx-auto text-center flex justify-center">
+                {' '}
+                <FaLongArrowAltDown></FaLongArrowAltDown>
+              </span>
+            </div>
 
             <a href="https://www.instagram.com/portgaz.d.sahil/">
               <div className="boxes boxes1">

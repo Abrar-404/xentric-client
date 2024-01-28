@@ -6,6 +6,7 @@ import '../../Components/Styles/texteffect.css';
 import CouponList from './../CouponList/CouponList';
 import BannerParallax from './../../Components/ParallaxBanner/BannerParallax';
 import Transition from '../../Components/Transitions/Transition';
+import Newsletter from '../../Components/Newsletter/Newsletter';
 
 const Home = () => {
   return (
@@ -23,6 +24,8 @@ const Home = () => {
       </div>
 
       <CouponList></CouponList>
+
+      <Newsletter></Newsletter>
 
       <div className="text-center mt-48 mb-48">
         <h1 className="lg:text-6xl md:text-4xl text-3xl text-white font-vermin text-flicker-in-glow">

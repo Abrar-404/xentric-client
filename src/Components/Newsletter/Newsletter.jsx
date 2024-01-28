@@ -46,7 +46,7 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact">
+    <div id="newsletter">
       <div className="">
         {/* <h1 className="text-white text-center md:text-4xl text-3xl lg:text-6xl mt-96 font-bold mb-32">
           Get in touch with us
@@ -54,9 +54,7 @@ const Contact = () => {
       </div>
       <div className="flex items-center md:flex-col lg:flex-row flex-col justify-center gap-20 mt-32">
         <div>
-          <h1 className="text-2xl text-white font-medium mb-5">
-            Contact Us
-          </h1>
+          <h1 className="text-2xl text-white font-medium mb-5">Contact Us</h1>
           <div className="carded">
             <div className="background"></div>
             <div className="logoed">

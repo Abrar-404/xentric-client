@@ -55,17 +55,17 @@
   right: 0;
 }
 
-body {
+/* body {
   background-image: linear-gradient(to bottom, #334, #111);
-}
+} */
 
-.container {
+.containerBox {
   perspective: 100rem;
   animation: bump 5s linear 3s infinite forwards;
 }
 
-.container,
-.container > * {
+.containerBox,
+.containerBox > * {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -77,14 +77,14 @@ body {
   transform-style: preserve-3d;
 }
 
-.container *,
-.container .street-lamps .street-lamp,
-.container .cars-incoming .car,
-.container .cars-incoming .reflect,
-.container .cars-going .car,
-.container .cars-going .reflect,
-.container .city-lights .light,
-.container .reflect {
+.containerBox *,
+.containerBox .street-lamps .street-lamp,
+.containerBox .cars-incoming .car,
+.containerBox .cars-incoming .reflect,
+.containerBox .cars-going .car,
+.containerBox .cars-going .reflect,
+.containerBox .city-lights .light,
+.containerBox .reflect {
   transform-style: preserve-3d;
 }
 

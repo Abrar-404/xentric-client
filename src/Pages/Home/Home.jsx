@@ -12,10 +12,12 @@ const Home = () => {
   return (
     <div className="mt-48">
       <Banner></Banner>
+
       <div className="text-center mt-48">
         <h1 className="lg:text-6xl md:text-4xl text-3xl text-white font-vermin text-flicker-in-glow">
           Featured
         </h1>
+
         <CardLoader></CardLoader>
       </div>
 

@@ -4,6 +4,7 @@ import '../Styles/webanimation.css';
 import AnimatedCursor from 'react-animated-cursor';
 import Spring from '../Spring/Spring';
 import { useState } from 'react';
+import DriveHome from '../../Animation/DriveHome';
 
 const MainLayout = () => {
   const location = useLocation();
@@ -49,9 +50,12 @@ const MainLayout = () => {
           <li></li>
           <li></li>
         </ul>
+
         <div className="md:max-w-[768px] max-w-[428px] lg:max-w-[1400px] mx-auto ">
           <Navbar></Navbar>
           <Spring key={count}></Spring>
+
+          <DriveHome></DriveHome>
           <Outlet></Outlet>
         </div>
       </div>

@@ -18,7 +18,6 @@ const Home = () => {
         <h1 className="lg:text-6xl md:text-4xl text-3xl text-white font-vermin text-flicker-in-glow">
           Featured
         </h1>
-
         <CardLoader></CardLoader>
       </div>
 

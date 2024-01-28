@@ -54,14 +54,14 @@ const Contact = () => {
       </div>
       <div className="flex items-center md:flex-col lg:flex-row flex-col justify-center gap-20 mt-32">
         <div>
-          <h1 className="text-2xl text-white font-medium text-center mb-5">
+          <h1 className="text-2xl text-white font-medium mb-5">
             Contact Us
           </h1>
           <div className="carded">
             <div className="background"></div>
             <div className="logoed">
               Socials <br />
-              <span className="mx-auto text-center flex justify-center">
+              <span className="mx-auto flex justify-center">
                 {' '}
                 <FaLongArrowAltDown></FaLongArrowAltDown>
               </span>

@@ -49,9 +49,10 @@
 .formush-container .formush-group label {
   display: block;
   margin-bottom: 5px;
-  color: #717171;
+  color: white;
   font-weight: 600;
-  font-size: 12px;
+  text-align: left;
+  font-size: 18px;
 }
 
 .formush-container .formush-group input {

@@ -25,7 +25,12 @@ const Home = () => {
 
       <CouponList></CouponList>
 
-      <Newsletter></Newsletter>
+      <div className="text-center mt-48">
+        <h1 className="lg:text-6xl md:text-4xl text-3xl text-white font-vermin text-flicker-in-glow">
+          Get in touch with us
+        </h1>
+        <Newsletter></Newsletter>
+      </div>
 
       <div className="text-center mt-48 mb-48">
         <h1 className="lg:text-6xl md:text-4xl text-3xl text-white font-vermin text-flicker-in-glow">

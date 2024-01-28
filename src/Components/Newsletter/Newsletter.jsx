@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import '../../Components/Styles/form.css';
+import '../../Components/Styles/newsform.css';
 import '../../Components/Styles/socials.css';
 import emailjs from '@emailjs/browser';
 import Swal from 'sweetalert2';
@@ -106,9 +106,9 @@ const Contact = () => {
           </div>
         </div>
         <div>
-          <div className="form-container">
-            <form className="form" ref={form} onSubmit={sendEmail}>
-              <div className="form-group">
+          <div className="formush-container">
+            <form className="formush" ref={form} onSubmit={sendEmail}>
+              <div className="formush-group">
                 <label
                   htmlFor="name"
                   className="text-white font-kalam font-bold"
@@ -125,7 +125,7 @@ const Contact = () => {
                   onChange={e => setName(e.target.value)}
                 />
               </div>
-              <div className="form-group">
+              <div className="formush-group">
                 <label htmlFor="email">Email</label>
                 <input
                   required=""
@@ -136,7 +136,7 @@ const Contact = () => {
                   onChange={e => setEmail(e.target.value)}
                 />
               </div>
-              <div className="form-group">
+              <div className="formush-group">
                 <label htmlFor="textarea">Message</label>
                 <textarea
                   required=""
@@ -148,7 +148,12 @@ const Contact = () => {
                   onChange={e => setMessage(e.target.value)}
                 ></textarea>
               </div>
-              <input type="submit" className="form-submit-btn" name="" id="" />
+              <input
+                type="submit"
+                className="formush-submit-btn"
+                name=""
+                id=""
+              />
             </form>
           </div>
         </div>

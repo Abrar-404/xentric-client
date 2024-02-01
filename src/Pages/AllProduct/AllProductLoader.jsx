@@ -52,8 +52,8 @@ const AllProductLoader = () => {
     <div>
       <div>
         {/* search bar */}
-        <div className="flex items-center gap-2 justify-center mt-10">
-          <div>
+        <div className="flex items-center gap-2 z-50  justify-center mt-10">
+          <div className="z-50">
             <input
               type="text"
               placeholder="Type here"
@@ -62,7 +62,7 @@ const AllProductLoader = () => {
               onChange={e => setSearchQuery(e.target.value)}
             />
           </div>
-          <button className="btn button-85" onClick={handleSearch}>
+          <button className="btn button-85 z-50" onClick={handleSearch}>
             Search
           </button>
         </div>

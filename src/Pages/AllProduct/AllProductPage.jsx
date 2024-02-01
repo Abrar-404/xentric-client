@@ -1,9 +1,9 @@
+import '../../Components/Styles/allproductcard.css';
 import { Link } from 'react-router-dom';
 
 // eslint-disable-next-line react/prop-types
 const AllProductPage = ({ item }) => {
   const { name, img, price, _id } = item || {};
-  // console.log(item);
 
   return (
     <>
@@ -33,6 +33,23 @@ const AllProductPage = ({ item }) => {
             </div>
           </div>
         </div>
+
+        {/* <div class="cardish-container">
+          <div class="cardish">
+            <div class="img-content">
+              <img className="img h-[300px]" src={img} alt="" />
+            </div>
+            <div class="content">
+              <p class="heading">{name}</p>
+              <p>Price: ${price}</p>
+              <div className="z-50">
+                <Link to={`/addProducts/${_id}`}>
+                  <button className="btn">Add to cart</button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div> */}
       </div>
     </>
   );

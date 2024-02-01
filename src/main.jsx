@@ -89,7 +89,9 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/myProducts/${params.id}`),
+          fetch(
+            `https://server-site-rho-silk.vercel.app/myProducts/${params.id}`
+          ),
       },
       {
         path: '/addProducts',
@@ -123,7 +125,9 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/trendingCards/${params.id}`),
+          fetch(
+            `https://server-site-rho-silk.vercel.app/trendingCards/${params.id}`
+          ),
       },
 
       // Admin, moderator and users related----------------------
@@ -184,13 +188,17 @@ const router = createBrowserRouter([
         path: '/featureCards/:id',
         element: <FeatureCardDetails></FeatureCardDetails>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/featureCards/${params.id}`),
+          fetch(
+            `https://server-site-rho-silk.vercel.app/featureCards/${params.id}`
+          ),
       },
       {
         path: '/trendingCards/:id',
         element: <TrendingCardDetails></TrendingCardDetails>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/trendingCards/${params.id}`),
+          fetch(
+            `https://server-site-rho-silk.vercel.app/trendingCards/${params.id}`
+          ),
       },
       {
         path: '/postReviewForm/:id',
@@ -200,7 +208,9 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/trendingCards/${params.id}`),
+          fetch(
+            `https://server-site-rho-silk.vercel.app/trendingCards/${params.id}`
+          ),
       },
       {
         path: '/addProductsForm/:id',
@@ -210,7 +220,9 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/trendingCards/${params.id}`),
+          fetch(
+            `https://server-site-rho-silk.vercel.app/trendingCards/${params.id}`
+          ),
       },
       {
         path: '/addProductsForm/:id',
@@ -220,7 +232,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/allItem/${params.id}`),
+          fetch(`https://server-site-rho-silk.vercel.app/allItem/${params.id}`),
       },
       {
         path: '/allItem/:id',
@@ -230,7 +242,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/allItem/${params.id}`),
+          fetch(`https://server-site-rho-silk.vercel.app/allItem/${params.id}`),
       },
       {
         path: '/allCoupon/:id',
@@ -240,7 +252,9 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/allCoupon/${params.id}`),
+          fetch(
+            `https://server-site-rho-silk.vercel.app/allCoupon/${params.id}`
+          ),
       },
       {
         path: '/updateCoupon/:id',
@@ -258,7 +272,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/allItem/${params.id}`),
+          fetch(`https://server-site-rho-silk.vercel.app/allItem/${params.id}`),
       },
       {
         path: '/addProducts/:id',
@@ -268,7 +282,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/allItem/${params.id}`),
+          fetch(`https://server-site-rho-silk.vercel.app/allItem/${params.id}`),
       },
       {
         path: '/allProducts/:id',
@@ -278,7 +292,9 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/allProducts/${params.id}`),
+          fetch(
+            `https://server-site-rho-silk.vercel.app/allProducts/${params.id}`
+          ),
       },
     ],
   },

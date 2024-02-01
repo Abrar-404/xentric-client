@@ -44,9 +44,13 @@ const Login = () => {
         console.log(loggedInGoogleUser);
         // const user = { email };
         axios
-          .post('http://localhost:5000/jwt', loggedInGoogleUser, {
-            withCredentials: true,
-          })
+          .post(
+            'https://server-site-rho-silk.vercel.app/jwt',
+            loggedInGoogleUser,
+            {
+              withCredentials: true,
+            }
+          )
           .then(res => {
             console.log(res.data);
           });

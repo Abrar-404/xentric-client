@@ -12,7 +12,7 @@ const Coupons = () => {
   const axiosSecure = useAxiosSecure();
 
   useEffect(() => {
-    fetch('http://localhost:5000/allCoupon')
+    fetch('https://server-site-rho-silk.vercel.app/allCoupon')
       .then(res => res.json())
       .then(data => {
         setItemCoup(data);

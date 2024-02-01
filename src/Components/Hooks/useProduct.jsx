@@ -4,7 +4,7 @@ const useProduct = () => {
   const [product, setProduct] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    fetch('http://localhost:5000/myProducts')
+    fetch('https://server-site-rho-silk.vercel.app/myProducts')
       .then(res => res.json())
       .then(data => {
         setProduct(data);

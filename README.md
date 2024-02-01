@@ -5,7 +5,7 @@
 
 ## Links of this project
 
-[Live Link](https://server-site-rho-silk.vercel.app/) <br>
+[Live Link](http://localhost:5000/) <br>
 [Client-side Link](https://github.com/Abrar-404/xentric-client) <br>
 [Server-side Link](https://github.com/Abrar-404/xentric-server) <br>
 

@@ -5,7 +5,7 @@ const CardLoader = () => {
   const [featured, setFeatured] = useState([]);
 
   useEffect(() => {
-    fetch('https://server-site-rho-silk.vercel.app/featureCards')
+    fetch('http://localhost:5000/featureCards')
       .then(res => res.json())
       .then(data => {
         console.log(data);

@@ -100,7 +100,7 @@ const CouponsCard = ({ coup }) => {
   const { name, date, description, discount } = coup || {};
 
   return (
-    <div className="">
+    <div data-aos="fade-up" data-aos-duration="2000" className="">
       <div class="book flex flex-col">
         <div>
           <span className="font-azonix text-white font-bold md:text-sm lg:text-sm">

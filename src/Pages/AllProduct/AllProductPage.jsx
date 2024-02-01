@@ -8,7 +8,7 @@ const AllProductPage = ({ item }) => {
   return (
     <>
       <div>
-        <div className="card card-compact shadow-xl">
+        {/* <div className="card card-compact shadow-xl">
           <figure>
             <img
               className="w-[300px] h-[200px] rounded-full transform hover:rotate-45 transition duration-300 ease-in-out"
@@ -32,24 +32,20 @@ const AllProductPage = ({ item }) => {
               </Link>
             </div>
           </div>
-        </div>
-
-        {/* <div class="cardish-container">
-          <div class="cardish">
-            <div class="img-content">
-              <img className="img h-[300px]" src={img} alt="" />
-            </div>
-            <div class="content">
-              <p class="heading">{name}</p>
-              <p>Price: ${price}</p>
-              <div className="z-50">
-                <Link to={`/addProducts/${_id}`}>
-                  <button className="btn">Add to cart</button>
-                </Link>
-              </div>
-            </div>
-          </div>
         </div> */}
+
+        <div class="cardish">
+          <img className="w-[350px] h-[300px]" src={img} alt="" />
+          <div class="cardish__content">
+            <Link to={`/allItem/${_id}`}>
+              <p class="cardish__title">{name}</p>
+              <p class="cardish__description">price ${price}</p>
+            </Link>
+            <Link to={`/addProducts/${_id}`}>
+              <button className="btn">Add to cart</button>
+            </Link>
+          </div>
+        </div>
       </div>
     </>
   );

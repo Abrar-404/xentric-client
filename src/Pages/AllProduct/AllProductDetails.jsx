@@ -42,10 +42,14 @@ const AllProductDetails = () => {
           <div class="cardBox flex justify-center mx-auto">
             <div class="allcard">
               {/* <div class="h4">Animated card</div> */}
-              <img className="h4" src={img} alt="" />
+              <img
+                className="h4 w-full h-full"
+                src={img || allItem?.image}
+                alt=""
+              />
 
               <div class="contentText">
-                <div class="h3">How's it goin Fam ?</div>
+                <div class="h3">{name}</div>
                 <p>
                   This is Pradeep Saran, your tech mate!!! I love you all. Lets
                   make this world a better place for all of us. Keep

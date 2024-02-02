@@ -1,4 +1,5 @@
 import { Link, useLoaderData } from 'react-router-dom';
+import '../../Components/Styles/allitemcard.css';
 
 const AllProductDetails = () => {
   const allItem = useLoaderData();
@@ -8,7 +9,7 @@ const AllProductDetails = () => {
     <div>
       <div className=" h-[100vh] ">
         <div>
-          <div className="card card-compact mt-20 shadow-xl">
+          {/* <div className="card card-compact mt-20 shadow-xl">
             <figure>
               <div className=" relative">
                 <img
@@ -34,6 +35,22 @@ const AllProductDetails = () => {
                 <Link to={`/postReviewForm/${_id}`}>
                   <button className="btn w-[30%] button-85">Post Review</button>
                 </Link>
+              </div>
+            </div>
+          </div> */}
+
+          <div class="cardBox flex justify-center mx-auto">
+            <div class="allcard">
+              {/* <div class="h4">Animated card</div> */}
+              <img className="h4" src={img} alt="" />
+
+              <div class="contentText">
+                <div class="h3">How's it goin Fam ?</div>
+                <p>
+                  This is Pradeep Saran, your tech mate!!! I love you all. Lets
+                  make this world a better place for all of us. Keep
+                  prospering...Keep learning!!!
+                </p>
               </div>
             </div>
           </div>

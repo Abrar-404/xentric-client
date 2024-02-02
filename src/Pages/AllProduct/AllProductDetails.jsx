@@ -66,7 +66,9 @@ const AllProductDetails = () => {
                   <button className="itemButton">Upvote</button>
                   <button className="itemButton">Report</button>
                 </div>
-                <button className="itemButton2 w-[300px]">Buy Now</button>
+                <Link to="/payment">
+                  <button className="itemButton2 w-[300px]">Buy Now</button>
+                </Link>
               </div>
             </div>
           </div>

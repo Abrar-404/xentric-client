@@ -60,7 +60,9 @@ const AllProductDetails = () => {
                 </div>
 
                 <div className="flex justify-evenly mx-auto mt-10 mb-10">
-                  <button className="itemButton">Post Review</button>
+                  <Link to={`/postReviewForm/${_id}`}>
+                    <button className="itemButton">Post Review</button>
+                  </Link>
                   <button className="itemButton">Upvote</button>
                   <button className="itemButton">Report</button>
                 </div>

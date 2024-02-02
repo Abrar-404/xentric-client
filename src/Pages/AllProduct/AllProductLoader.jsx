@@ -3,6 +3,7 @@ import useAxiosPublic from '../../Components/Hooks/useAxiosPublic';
 import AllProductPage from './AllProductPage';
 import CustomPagination from './CustomPagination';
 import '../../Components/Styles/button86.css';
+import '../../Components/Styles/searchbtn.css';
 
 const ITEMS_PER_PAGE = 20;
 
@@ -62,7 +63,11 @@ const AllProductLoader = () => {
               onChange={e => setSearchQuery(e.target.value)}
             />
           </div>
-          <button className="btn button-85 z-50" onClick={handleSearch}>
+          {/* <button className="btn button-85 z-50" onClick={handleSearch}>
+            Search
+          </button> */}
+
+          <button role="button" class="buton-name" onClick={handleSearch}>
             Search
           </button>
         </div>

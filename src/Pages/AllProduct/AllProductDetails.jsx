@@ -1,5 +1,6 @@
 import { Link, useLoaderData } from 'react-router-dom';
 import '../../Components/Styles/allitemcard.css';
+import '../../Components/Styles/itembutton.css';
 
 const AllProductDetails = () => {
   const allItem = useLoaderData();
@@ -50,11 +51,20 @@ const AllProductDetails = () => {
 
               <div class="contentText">
                 <div class="h3">{name}</div>
-                <p>
-                  This is Pradeep Saran, your tech mate!!! I love you all. Lets
-                  make this world a better place for all of us. Keep
-                  prospering...Keep learning!!!
-                </p>
+                <p className="description">Description : {description}</p>
+                <div>
+                  <p className="mt-10">Tag : {tag}</p>
+                </div>
+                <div>
+                  <p className="mt-10">More here : {more}</p>
+                </div>
+
+                <div className="flex justify-evenly mx-auto mt-10 mb-10">
+                  <button className="itemButton">Post Review</button>
+                  <button className="itemButton">Upvote</button>
+                  <button className="itemButton">Report</button>
+                </div>
+                <button className="itemButton2 w-[300px]">Buy Now</button>
               </div>
             </div>
           </div>

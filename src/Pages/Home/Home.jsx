@@ -8,6 +8,7 @@ import BannerParallax from './../../Components/ParallaxBanner/BannerParallax';
 import Transition from '../../Components/Transitions/Transition';
 import Newsletter from '../../Components/Newsletter/Newsletter';
 import DriveHome from '../../Animation/DriveHome';
+import FileUpload from '../../Components/FileUpload/FileUpload';
 
 const Home = () => {
   return (
@@ -33,6 +34,10 @@ const Home = () => {
           Get in touch with us
         </h1>
         <Newsletter></Newsletter>
+      </div>
+
+      <div>
+        <FileUpload></FileUpload>
       </div>
 
       <div className="text-center mt-48 mb-48">

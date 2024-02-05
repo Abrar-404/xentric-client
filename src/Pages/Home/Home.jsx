@@ -8,7 +8,7 @@ import BannerParallax from './../../Components/ParallaxBanner/BannerParallax';
 import Transition from '../../Components/Transitions/Transition';
 import Newsletter from '../../Components/Newsletter/Newsletter';
 import DriveHome from '../../Animation/DriveHome';
-import FileUpload from '../../Components/FileUpload/FileUpload';
+// import FileUpload from '../../Components/FileUpload/FileUpload';
 
 const Home = () => {
   return (
@@ -36,9 +36,9 @@ const Home = () => {
         <Newsletter></Newsletter>
       </div>
 
-      <div>
+      {/* <div>
         <FileUpload></FileUpload>
-      </div>
+      </div> */}
 
       <div className="text-center mt-48 mb-48">
         <h1 className="lg:text-6xl md:text-4xl text-3xl text-white font-vermin text-flicker-in-glow">

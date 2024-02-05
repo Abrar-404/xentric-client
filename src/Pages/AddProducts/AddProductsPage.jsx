@@ -8,7 +8,6 @@ import TagsInput from 'react-tagsinput';
 import 'react-tagsinput/react-tagsinput.css';
 import Transition from '../../Components/Transitions/Transition';
 
-
 const AddProductsPage = () => {
   const { user } = useContext(AuthContext);
   const axiosSecure = useAxiosSecure();
@@ -66,7 +65,7 @@ const AddProductsPage = () => {
       </h1>
       <div className="hero min-h-screen mt-10 bg-transparent">
         <div className="hero-content flex-col lg:flex-row-reverse">
-          <div className="card shrink-0 w-full max-w-sm shadow-2xl  button-85">
+          <div className="card shrink-0 w-full  shadow-2xl  button-85">
             <form onSubmit={handleAdd} className="card-body">
               <div className="form-control">
                 <div className="items-center"></div>
@@ -83,29 +82,31 @@ const AddProductsPage = () => {
                 </div>
               </div>
 
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text text-white">Product Name</span>
-                </label>
-                <input
-                  type="text"
-                  placeholder="Product Name"
-                  className="input input-bordered text-black"
-                  required
-                  name="name"
-                />
-              </div>
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text text-white">Product Image</span>
-                </label>
-                <input
-                  type="text"
-                  placeholder="E.g: https://i.ibb.co/8PXm9m2/1850380481.jpg"
-                  className="input input-bordered text-black"
-                  required
-                  name="image"
-                />
+              <div className="flex mx-auto">
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text text-white">Product Name</span>
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Product Name"
+                    className="input input-bordered text-black"
+                    required
+                    name="name"
+                  />
+                </div>
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text text-white">Product Image</span>
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="E.g: https://i.ibb.co/8PXm9m2/1850380481.jpg"
+                    className="input input-bordered text-black"
+                    required
+                    name="image"
+                  />
+                </div>
               </div>
               <div className="form-control">
                 <label className="label">

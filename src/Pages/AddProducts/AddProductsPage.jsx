@@ -7,6 +7,7 @@ import { AuthContext } from '../../Providers/AuthProvider';
 import TagsInput from 'react-tagsinput';
 import 'react-tagsinput/react-tagsinput.css';
 import Transition from '../../Components/Transitions/Transition';
+import '../../Components/Styles/button.css'
 
 const AddProductsPage = () => {
   const { user } = useContext(AuthContext);
@@ -68,7 +69,7 @@ const AddProductsPage = () => {
             <form onSubmit={handleAdd} className="card-body">
               <div className="form-control">
                 <div className="items-center"></div>
-                <div className="flex items-center gap-2 justify-evenly md:flex-row lg:flex-row flex-col">
+                <div className="flex items-center gap-2 mb-10 justify-evenly md:flex-row lg:flex-row flex-col">
                   <img
                     className="w-[80px] rounded-full"
                     src={user?.photoURL}
@@ -159,7 +160,7 @@ const AddProductsPage = () => {
               </div>
 
               <div className="form-control mt-6">
-                <button className="btn button-85">Submit</button>
+                <button className="btn bittushh">Submit</button>
               </div>
             </form>
           </div>

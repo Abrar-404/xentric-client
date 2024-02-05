@@ -81,7 +81,9 @@ const AddProductsPage = () => {
                     | <br />|
                   </span>
                   <div>
-                    <h1 className=''>{user?.displayName}</h1>
+                    <h1 className="text-white font-bold font-tech">
+                      {user?.displayName}
+                    </h1>
                     <h1 className="text-xs text-white">
                       Email : {user?.email}
                     </h1>

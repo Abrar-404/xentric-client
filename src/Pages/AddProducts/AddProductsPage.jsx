@@ -75,14 +75,21 @@ const AddProductsPage = () => {
                     src={user?.photoURL}
                     alt=""
                   />
+                  <span className="text-white">
+                    {' '}
+                    | <br />
+                    | <br />|
+                  </span>
                   <div>
-                    <h1>{user?.displayName}</h1>
-                    <h1 className="text-xs">Email : {user?.email}</h1>
+                    <h1 className=''>{user?.displayName}</h1>
+                    <h1 className="text-xs text-white">
+                      Email : {user?.email}
+                    </h1>
                   </div>
                 </div>
               </div>
 
-              <div className="flex mx-auto">
+              <div className="flex mx-auto gap-5">
                 <div className="form-control">
                   <label className="label">
                     <span className="label-text text-white">Product Name</span>

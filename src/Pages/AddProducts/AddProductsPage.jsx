@@ -59,9 +59,8 @@ const AddProductsPage = () => {
 
   return (
     <div>
-      <h1 className="text-center text-3xl mt-32 font-vermin">
-        <span className="text-red-700">Add</span>{' '}
-        <span className="text-white">Products</span>
+      <h1 className="lg:text-6xl md:text-4xl text-3xl mt-20 text-center text-white font-vermin text-flicker-in-glow">
+        Add Products
       </h1>
       <div className="hero min-h-screen mt-10 bg-transparent">
         <div className="hero-content flex-col lg:flex-row-reverse">
@@ -150,7 +149,7 @@ const AddProductsPage = () => {
                 <TagsInput value={tags} onChange={tags => setTags(tags)} />
               </div>
 
-              <div className="form-control">
+              <div className="form-control text-white">
                 <label className="label">
                   <span className="label-text text-white">External Links</span>
                 </label>
